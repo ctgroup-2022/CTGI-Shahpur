@@ -1,0 +1,3024 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--<< Header Area >>-->
+    <head>
+        <!-- ========== Meta Tags ========== -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="CTGI-Shahpur">
+        <meta name="description" content="CTGI-Shahpur">
+        <!-- ======== Page title ============ -->
+        <title>CTGI-Shahpur</title>
+        <!--<< Favicon >>-->
+        <link rel="icon" href="assets/img/favicon1.ico" type="image/x-icon">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+
+
+
+        <!--<< Bootstrap min.css >>-->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!--<< Font Awesome.css >>-->
+        <link rel="stylesheet" href="assets/css/font-awesome.css">
+        <!--<< Animate.css >>-->
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <!--<< Magnific Popup.css >>-->
+        <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        <!--<< MeanMenu.css >>-->
+        <link rel="stylesheet" href="assets/css/meanmenu.css">
+        <!--<< Odometer.css >>-->
+        <link rel="stylesheet" href="assets/css/odometer.css">
+        <!--<< Swiper Bundle.css >>-->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        <!--<< Nice Select.css >>-->
+        <link rel="stylesheet" href="assets/css/nice-select.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+        
+
+        <!--<< Main.css >>-->
+        <link rel="stylesheet" href="assets/css/main.css">
+        <!--<< Style.css >>-->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <style>
+        /* Make course list items clickable while preserving text appearance */
+        .course-list a {
+            color: inherit;
+            font: inherit;
+            font-weight: inherit;
+            font-size: inherit;
+            text-decoration: none;
+            display: inline;
+        }
+        .course-list a:hover,
+        .course-list a:focus {
+            text-decoration: none;
+            outline: none;
+        }
+        </style>
+    </head>
+
+    <body style="padding-top: 0px;">
+
+         <!-- Preloader Start -->
+         <div id="preloader" class="preloader">
+            <div class="animation-preloader">
+                <div class="edu-preloader-icon"> 
+                    <img src="assets/img/preloader.gif" alt="">               
+                </div>
+                <div class="txt-loading">
+                    <span data-text-preloader="C" class="letters-loading">
+                        C
+                    </span>
+                    <span data-text-preloader="T" class="letters-loading">
+                        T
+                    </span>
+                    <span data-text-preloader="G" class="letters-loading">
+                        G
+                    </span>
+                    <span data-text-preloader="R" class="letters-loading">
+                        R
+                    </span>
+                    <span data-text-preloader="O" class="letters-loading">
+                        O
+                    </span>
+                    <span data-text-preloader="U" class="letters-loading">
+                        U
+                    </span>
+                    <span data-text-preloader="P" class="letters-loading">
+                        P
+                    </span>
+                    <!-- <span data-text-preloader="E" class="letters-loading">
+                        E
+                    </span> -->
+                </div>
+                <p class="text-center">Loading</p>
+            </div>
+            <div class="loader">
+                <div class="row">
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back To Top start -->
+        <button id="back-top" class="back-to-top" type="button" title="Back to top">
+            <i class="fas fa-long-arrow-up"></i>
+        </button>
+
+        <!-- Mobile Sidebar Menu Start -->
+        <div class="mobile-sidebar-overlay" id="mobileSidebarOverlay"></div>
+        <div class="mobile-sidebar" id="mobileSidebar">
+            <div class="mobile-sidebar-header">
+                <button class="mobile-sidebar-close" id="mobileSidebarClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="mobile-sidebar-content">
+                <!-- Courses Menu -->
+                <div class="mobile-menu-section">
+                    <h3 class="mobile-menu-title">Courses Offered</h3>
+                    <ul class="mobile-submenu">
+                        <!-- After Matric (10th) -->
+                        <li class="mobile-submenu-item">
+                            <span class="mobile-submenu-category" onclick="toggleMobileCoursesCategory(this)">
+                                <i class="fas fa-chevron-right"></i> After Matric (10th)
+                            </span>
+                            <ul class="mobile-sub-list">
+                                <li><a href="#popular-courses"><strong>School Education (10+1 / 10+2)</strong></a></li>
+                                <li><a href="#popular-courses">10+1 Arts</a></li>
+                                <li><a href="#popular-courses">10+1 Commerce</a></li>
+                                <li><a href="#popular-courses">10+1 Medical</a></li>
+                                <li><a href="#popular-courses">10+1 Non-Medical</a></li>
+                                <li><a href="#popular-courses">10+2 Arts</a></li>
+                                <li><a href="#popular-courses">10+2 Commerce</a></li>
+                                <li><a href="#popular-courses">10+2 Medical</a></li>
+                                <li><a href="#popular-courses">10+2 Non-Medical</a></li>
+                                
+                                <li><a href="#popular-courses"><strong>Polytechnic Engineering</strong></a></li>
+                                <li><a href="#popular-courses">Diploma in CSE</a></li>
+                                <li><a href="#popular-courses">Diploma in ECE</a></li>
+                                <li><a href="#popular-courses">Diploma in Civil</a></li>
+                                <li><a href="#popular-courses">Diploma in Mechanical</a></li>
+                                <li><a href="#popular-courses">Diploma in Electrical</a></li>
+                                
+                                <li><a href="#popular-courses"><strong>Allied Healthcare</strong></a></li>
+                                <li><a href="#popular-courses">Diploma in Pharmacy</a></li>
+                                <li><a href="#popular-courses">DMLT – Medical Lab Technology</a></li>
+                                
+                                <li><a href="#popular-courses"><strong>Education & Child Development</strong></a></li>
+                                <li><a href="#popular-courses">D.El.Ed – Elementary Education</a></li>
+                                <li><a href="#popular-courses">Diploma in ECCE</a></li>
+                                
+                                <li><a href="#popular-courses"><strong>Hotel Management</strong></a></li>
+                                <li><a href="#popular-courses">Diploma in Food Production</a></li>
+                                <li><a href="#popular-courses">Diploma in Food Production & Patisserie</a></li>
+                            </ul>
+                        </li>
+                        
+                        <!-- After +2 / Diploma -->
+                        <li class="mobile-submenu-item">
+                            <span class="mobile-submenu-category" onclick="toggleMobileCoursesCategory(this)">
+                                <i class="fas fa-chevron-right"></i> After +2 / Diploma
+                            </span>
+                            <ul class="mobile-sub-list">
+                                <li><a href="#popular-courses"><strong>Engineering & Architecture</strong></a></li>
+                                <li><a href="#popular-courses">B.Tech Civil (Regular/LEET)</a></li>
+                                <li><a href="#popular-courses">B.Tech Mechanical (Regular/LEET)</a></li>
+                                <li><a href="#popular-courses">B.Tech Electrical – EE (Regular/LEET)</a></li>
+                                <li><a href="#popular-courses">B.Tech Electronics & Communication – ECE</a></li>
+                                <li><a href="#popular-courses">B.Tech Computer Science Engineering – CSE</a></li>
+                                <li><a href="#popular-courses">B.Tech CSE – AI & ML</a></li>
+                                <li><a href="#popular-courses">B.Tech CSE – Internet of Things</a></li>
+                                
+                                <li><a href="#popular-courses"><strong>Management, Law & Humanities</strong></a></li>
+                                <li><a href="#popular-courses">BBA (GNDU / PTU)</a></li>
+                                <li><a href="#popular-courses">B.Com (GNDU / Hons)</a></li>
+                                <li><a href="#popular-courses">BA (GNDU)</a></li>
+                                <li><a href="#popular-courses">BA Journalism & Mass Communication</a></li>
+                                <li><a href="#popular-courses">BA LLB</a></li>
+                                <li><a href="#popular-courses">B.Com LLB</a></li>
+                                <li><a href="#popular-courses">B.Ed – Bachelor of Education</a></li>
+                                
+                                <li><a href="#popular-courses"><strong>Science, Health & Design</strong></a></li>
+                                <li><a href="#popular-courses">B.Sc Biotechnology</a></li>
+                                <li><a href="#popular-courses">B.Sc MLS – Medical Laboratory Science</a></li>
+                                <li><a href="#popular-courses">B.Pharmacy (Regular / LEET)</a></li>
+                                <li><a href="#popular-courses">Bachelor of Physiotherapy</a></li>
+                                <li><a href="#popular-courses">B.Sc Fashion Design</a></li>
+                                <li><a href="#popular-courses">B.Sc Multimedia</a></li>
+                                
+                                <li><a href="#popular-courses"><strong>Hotel Management & Tourism</strong></a></li>
+                                <li><a href="#popular-courses">B.Sc Hospitality & Hotel Administration</a></li>
+                                <li><a href="#popular-courses">B.Sc (Hons) Nutrition and Dietetics</a></li>
+                                <li><a href="#popular-courses">Bachelor of Hotel Management & Catering</a></li>
+                                <li><a href="#popular-courses">Bachelor of Tourism & Travel Management</a></li>
+                                
+                                <li><a href="#popular-courses"><strong>Vocational Programs (B.Voc)</strong></a></li>
+                                <li><a href="#popular-courses">B.Voc Web Technology & Multimedia</a></li>
+                                <li><a href="#popular-courses">B.Voc Software Development</a></li>
+                                <li><a href="#popular-courses">B.Voc E-Commerce & Digital Marketing</a></li>
+                                <li><a href="#popular-courses">B.Voc Fashion Design & Garment Technology</a></li>
+                                <li><a href="#popular-courses">B.Voc Interior Design</a></li>
+                                <li><a href="#popular-courses">B.Voc Beauty Therapy & Aesthetics</a></li>
+                                <li><a href="#popular-courses">B.Voc Hospitality & Catering Management</a></li>
+                                
+                                <li><a href="#popular-courses"><strong>Architecture</strong></a></li>
+                                <li><a href="#popular-courses">B.Arch – Bachelor of Architecture</a></li>
+                                <li><a href="#popular-courses">B.Design – Interior Design</a></li>
+                                
+                                <li><a href="#popular-courses"><strong>Computer Applications</strong></a></li>
+                                <li><a href="#popular-courses">BCA – Computer Applications</a></li>
+                                <li><a href="#popular-courses">PGDCA – Computer Applications</a></li>
+                            </ul>
+                        </li>
+                        
+                        <!-- After Graduation -->
+                        <li class="mobile-submenu-item">
+                            <span class="mobile-submenu-category" onclick="toggleMobileCoursesCategory(this)">
+                                <i class="fas fa-chevron-right"></i> After Graduation
+                            </span>
+                            <ul class="mobile-sub-list">
+                                <li><a href="#popular-courses"><strong>Engineering & Technology</strong></a></li>
+                                <li><a href="#popular-courses">M.Tech CSE</a></li>
+                                <li><a href="#popular-courses">M.Tech Electronics & Communication</a></li>
+                                
+                                <li><a href="#popular-courses"><strong>Science & Design</strong></a></li>
+                                <li><a href="#popular-courses">M.Sc Biotechnology</a></li>
+                                <li><a href="#popular-courses">M.Sc Fashion Design</a></li>
+                                
+                                <li><a href="#popular-courses"><strong>Management & Education</strong></a></li>
+                                <li><a href="#popular-courses">MBA (HR / Finance / Marketing)</a></li>
+                                <li><a href="#popular-courses">M.Ed – Master of Education</a></li>
+                                
+                                <li><a href="#popular-courses"><strong>Pharmacy & Healthcare</strong></a></li>
+                                <li><a href="#popular-courses">Master of Pharmacy</a></li>
+                                <li><a href="#popular-courses">Pharm.D – Doctor of Pharmacy</a></li>
+                                <li><a href="#popular-courses">Pharm.D – Post Baccalaureate</a></li>
+                                
+                                <li><a href="#popular-courses"><strong>Computer Applications</strong></a></li>
+                                <li><a href="#popular-courses">MCA – Master of Computer Applications</a></li>
+                                
+                                <li><a href="#popular-courses"><strong>Hotel Management</strong></a></li>
+                                <li><a href="#popular-courses">Master of Hospitality Management & Catering</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Offcanvas Area Start -->
+        <!-- <div class="fix-area">
+            <div class="offcanvas__info">
+                <div class="offcanvas__wrapper">
+                    <div class="offcanvas__content">
+                        <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
+                            <div class="offcanvas__logo">
+                                <a href="index.html">
+                                    <img src="assets/img/logo/black-logo.svg" alt="logo-img">
+                                </a>
+                            </div>
+                            <div class="offcanvas__close">
+                                <button type="button" title="Close menu" aria-label="Close menu">
+                                <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h3 class="offcanvas-title">Hello There!</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit, </p>
+                        <div class="social-icon d-flex align-items-center">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <div class="mobile-menu fix mb-3"></div>
+                        <div class="offcanvas__contact">
+                            <h3>Information</h3>
+                            <ul class="contact-list">
+                                <li>
+                                    <span>
+                                        Address:
+                                    </span>
+                                    7300-7398 Colonial Rd,
+                                    Brooklyn, NY 11209
+                                </li>
+                                <li>
+                                    <span>
+                                        Call Us:
+                                    </span>
+                                    <a href="tel:+00012345688">+000 123 456 88</a>
+                                </li>
+                                <li>
+                                    <span>
+                                        Email:
+                                    </span>
+                                    <a href="mailto:supportedus@gmail.com">supportedus@gmail.com</a>
+                                </li>
+                            </ul>
+                            <div class="offcanvas-button">
+                                <a href="sign-in.html" class="theme-btn style-2"><i class="far fa-user"></i> Admin</a>
+                                <a href="register.html" class="theme-btn yellow-btn">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="offcanvas__overlay"></div> -->
+
+        <!-- Header Section Start -->
+   <header class="header-section-3" style="background-color: var(--theme-red);">
+        <div class="header-3">
+            <div class="container">
+                <div class="header-main d-flex justify-content-between align-items-center">
+                    
+                    <!-- Logo on the left -->
+                    <a href="index-3.html" class="header-logo d-flex align-items-center">
+                        <img src="assets/img/header/nav_logo1.webp" alt="logo-img" style="height: 50px; width: auto; ">
+                        <img src="assets/img/header/nav_logo2.png" alt="logo-img" style="height: 70px; width: 70px; ">
+                        <img src="assets/img/header/nav_logo3.png" alt="logo-img" style="height: 70px; width: 70px;">
+
+                    </a>
+
+                    <!-- Right corner content -->
+                    <div class="d-flex align-items-center gap-3">
+                        <!-- Explore Button -->
+                        <!-- <a href="#popular-courses" class="theme-btn ms-3 ">Courses Offered</a> -->
+                        <!-- Courses Offered Button -->
+
+                        <div class="courses-menu-wrapper">
+                            <a href="javascript:void(0)" class="theme-btn" onclick="toggleCoursesMegaMenu()">
+                                Courses Offered
+                            </a>
+
+                            <!-- Courses Mega Menu -->
+                            <div class="courses-mega-menu" id="coursesMegaMenu">
+                                <div class="mega-menu-inner">
+                                    <!-- Left Tab Column -->
+                                    <aside class="mega-menu-side">
+                                        <div class="mega-menu-tabs">
+                                                <button class="mega-menu-tab active" data-cat="matric" onclick="filterCourseCategory(event, 'matric')">After Matric (10th)</button>
+                                                <button class="mega-menu-tab" data-cat="diploma" onclick="filterCourseCategory(event, 'diploma')">After +2 / Diploma</button>
+                                                <button class="mega-menu-tab" data-cat="graduation" onclick="filterCourseCategory(event, 'graduation')">After Graduation</button>
+                                        </div>
+                                    </aside>
+
+                                    <!-- Right Content Area -->
+                                <div class="mega-menu-body">
+                                    <div class="mega-menu-courses">
+
+                                        <!-- ================= AFTER MATRIC ================= -->
+                                        <div class="course-category" data-category="matric">
+                                            <h5 class="category-title">School Education (10+1 / 10+2)</h5>
+                                            <ul class="course-list">
+                                                <li>10+1 Arts</li>
+                                                <li>10+1 Commerce</li>
+                                                <li>10+1 Medical</li>
+                                                <li>10+1 Non-Medical</li>
+                                                <li>10+2 Arts</li>
+                                                <li>10+2 Commerce</li>
+                                                <li>10+2 Medical</li>
+                                                <li>10+2 Non-Medical</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="course-category" data-category="matric">
+                                            <h5 class="category-title">Polytechnic Engineering</h5>
+                                            <ul class="course-list">
+                                                <li>Diploma in CSE </li>
+                                                <li>Diploma in ECE </li>
+                                                <li>Diploma in Civil </li>
+                                                <li>Diploma in Mechanical </li>
+                                                <li>Diploma in Electrical </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="course-category" data-category="matric">
+                                            <h5 class="category-title">Allied Healthcare</h5>
+                                            <ul class="course-list">
+                                                <li>Diploma in Pharmacy</li>
+                                                <li>DMLT – Diploma in Medical Lab Technology</li>
+                                            </ul>
+                                        </div>
+
+
+                                        <div class="course-category" data-category="matric">
+                                            <h5 class="category-title">Education & Child Development</h5>
+                                            <ul class="course-list">
+                                                <li>D.El.Ed – Diploma in Elementary Education (SCERT)</li>
+                                                <li>Diploma in Early Childhood Care & Education (ECCE)</li>
+                                            </ul>
+                                        </div>
+                                        <div class="course-category" data-category="matric">
+                                            <h5 class="category-title">Hotel Management</h5>
+                                            <ul class="course-list">
+                                                <li>Diploma in Food Production</li>
+                                                <li>Diploma in Food Production & Patisserie</li>
+                                            </ul>
+                                        </div>
+
+
+
+                                        <!-- ================= AFTER +2 / DIPLOMA ================= -->
+                                        <div class="course-category" data-category="diploma">
+                                            <h5 class="category-title">Engineering & Architecture</h5>
+                                            <ul class="course-list">
+                                                <li>B.Tech Civil (Regular / LEET)</li>
+                                                <li>B.Tech Mechanical (Regular / LEET)</li>
+                                                <li>B.Tech Electrical – EE (Regular / LEET)</li>
+                                                <li>B.Tech Electronics & Communication – ECE (Regular / LEET)</li>
+                                                <li>B.Tech Computer Science Engineering – CSE (Regular / LEET)</li>
+                                                <li>B.Tech CSE – AI & ML (Regular / LEET)</li>
+                                                <li>B.Tech CSE – Internet of Things - IoT (Regular / LEET)</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="course-category" data-category="diploma">
+                                            <h5 class="category-title">Management, Law & Humanities</h5>
+                                            <ul class="course-list">
+                                                <li>BBA (GNDU / PTU)</li>
+                                                <li>B.Com (GNDU / Hons)</li>
+                                                <li>BA (GNDU)</li>
+                                                <li>BA Journalism & Mass Communication</li>
+                                                <li>BA LLB</li>
+                                                <li>B.Com LLB</li>
+                                                <li>B.Ed – Bachelor of Education</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="course-category" data-category="diploma">
+                                            <h5 class="category-title">Science, Health & Design</h5>
+                                            <ul class="course-list">
+                                                <li>B.Sc Biotechnology</li>
+                                                <li>B.Sc MLS – Medical Laboratory Science (Regular / LEET)</li>
+                                                <li>B.Pharmacy (Regular / LEET)</li>
+                                                <li>Bachelor of Physiotherapy</li>
+                                                <li>B.Sc Fashion Design</li>
+                                                <li>B.Sc Multimedia</li>
+                                            </ul><br>
+                                            <h5 class="category-title">Hotel Management & Tourism</h5>
+                                            <ul class="course-list">
+                                                <li>B.Sc Hospitality & Hotel Administration (NCHMCT)</li>
+                                                <li>B.Sc (Hons) Nutrition and Dietetics</li>
+                                                <li>Bachelor of Hotel Management & Catering Technology</li>
+                                                <li>Bachelor of Tourism & Travel Management</li>
+                                                
+                                            </ul>
+                                        </div>
+
+                                        <div class="course-category" data-category="diploma">
+                                            <h5 class="category-title">Vocational Programs (B.Voc)</h5>
+                                            <ul class="course-list mb-1">
+                                                <li>B.Voc Web Technology & Multimedia</li>
+                                                <li>B.Voc Software Development</li>
+                                                <li>B.Voc E-Commerce & Digital Marketing</li>
+                                                <li>B.Voc Fashion Design & Garment Technology</li>
+                                                <li>B.Voc Interior Design</li>
+                                                <li>B.Voc Beauty Therapy & Aesthetics</li>
+                                                <li>B.Voc Hospitality & Catering Management</li>
+                                            </ul>
+                                            <h5 class="category-title">Architecture </h5>
+                                            <ul class="course-list">
+                                                <li>B.Arch – Bachelor of Architecture</li>
+                                                <li>B.Design – Interior Design</li>
+                                            
+                                            </ul><br>
+                                            <h5 class="category-title">Computer Applications</h5>
+                                            <ul class="course-list">
+                                                <li>BCA – Bachelor of Computer Applications</li>
+                                                <li>PGDCA – Post Graduate Diploma in Computer Applications</li>
+                                            </ul>
+
+                                        </div>
+
+                                        <div class="course-category" data-category="diploma">
+                                            
+                                        </div>
+                                        
+
+
+
+                                        <!-- ================= AFTER GRADUATION ================= -->
+
+                                        <!-- Engineering & Technology -->
+                                        <div class="course-category" data-category="graduation">
+                                            <h5 class="category-title">Post Graduate – Engineering & Technology</h5>
+                                            <ul class="course-list">
+                                                <li>M.Tech Computer Science Engineering</li>
+                                                <li>M.Tech Electronics & Communication Engineering</li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Science & Design -->
+                                        <div class="course-category" data-category="graduation">
+                                            <h5 class="category-title">Post Graduate – Science & Design</h5>
+                                            <ul class="course-list">
+                                                <li>M.Sc Biotechnology</li>
+                                                <li>M.Sc Fashion Design</li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Management & Education -->
+                                        <div class="course-category" data-category="graduation">
+                                            <h5 class="category-title">Post Graduate – Management & Education</h5>
+                                            <ul class="course-list">
+                                                <li>MBA (HR / Finance / Marketing)</li>
+                                                <li>M.Ed – Master of Education</li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Pharmacy & Healthcare -->
+                                        <div class="course-category" data-category="graduation">
+                                            <h5 class="category-title">Post Graduate – Pharmacy & Healthcare</h5>
+                                            <ul class="course-list">
+                                                <li>Master of Pharmacy</li>
+                                                <li>Pharm.D – Doctor of Pharmacy</li>
+                                                <li>Pharm.D – Post Baccalaureate</li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Computer Applications -->
+                                        <div class="course-category" data-category="graduation">
+                                            <h5 class="category-title">Post Graduate – Computer Applications</h5>
+                                            <ul class="course-list">
+                                                <li>MCA – Master of Computer Applications</li>
+                                            </ul>
+                                        </div>
+                                        <div class="course-category" data-category="graduation">
+                                            <h5 class="category-title">Hotel Management</h5>
+                                            <ul class="course-list">
+                                            
+                                                <li>Master of Hospitality Management & Catering Technology (MHMCT)</li>
+                                            </ul>
+                                        </div>
+
+
+                                            </div>
+                                        </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Toll Free -->
+                        <div class="toll-free text-white ms-3 text-bold">
+                        <i class="fas fa-phone-alt"></i>  Toll free: 1800-137-4321
+                        </div>
+                    </div>
+
+                    <!-- Hamburger for mobile -->
+                    <div class="header__hamburger d-xl-none">
+                        <div class="sidebar__toggle">
+                            <i class="fas fa-bars"></i>
+                        
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+   </header>
+
+
+
+
+        <!-- <header class="header-section-3"  style="background-color: var(--theme-red);">
+            <div id="" class="header-3" >
+                <div class="container">
+                    <div class="mega-menu-wrapper">
+                        <div class="header-main "  >
+                            <a href="index-3.html" class="header-logo">
+                                <img src="assets/img/logo/nav_logo1.webp" alt="logo-img" style=" height: 50px; width: auto; " >
+                                <img src="assets/img/logo/nav_logo2.png" alt="logo-img" style=" height: 50px; width: 50px;">
+                            </a>
+                            <div class="header-button ms-5 pb-2">
+                                <a href="#popular-courses" class="theme-btn border-btn ms-3">Explore Programs</a>
+                            </div>
+                            <div class="toll-free ms-5">
+                                Toll free: 1800-137-4321
+                            </div> -->
+                            <!-- <a href="index-3.html" class="header-logo-2">
+                                <img src="assets/img/logo/nav_logo2.png" alt="logo-img" style=" height: 60px; width: 60px;">
+                            </a> -->
+                            <!-- <div class="header-left"> -->
+                                <!-- <div class="mean__menu-wrapper">
+                                    <div class="main-menu">
+                                        <nav id="mobile-menu">
+                                            <ul>
+                                                <li class="has-dropdown menu-thumb">
+                                                    <a href="index.html">
+                                                        <span class="head-icon"><i class="fas fa-home-lg"></i></span>
+                                                        Home
+                                                        <i class="fas fa-chevron-down"></i>
+                                                    </a>
+                                                    <ul class="submenu has-homemenu">
+                                                        <li>
+                                                            <div class="homemenu-items">
+                                                                <div class="row">
+                                                                    <div class="col-lg-3 homemenu">
+                                                                        <div class="homemenu-thumb">
+                                                                           <a href="index.html">
+                                                                                <img src="assets/img/header/home-1.jpg" alt="img">
+                                                                           </a>
+                                                                        </div>
+                                                                        <div class="homemenu-content text-center">
+                                                                            <h4 class="homemenu-title">
+                                                                               <a href="index.html">
+                                                                                    Education
+                                                                               </a>
+                                                                            </h4>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-3 homemenu">
+                                                                        <div class="homemenu-thumb mb-15">
+                                                                            <a href="index-2.html">
+                                                                                <img src="assets/img/header/home-2.jpg" alt="img">
+                                                                           </a>
+                                                                        </div>
+                                                                        <div class="homemenu-content text-center">
+                                                                            <h4 class="homemenu-title">
+                                                                                <a href="index-2.html">
+                                                                                    Online Course
+                                                                                </a>
+                                                                            </h4>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-3 homemenu">
+                                                                        <div class="homemenu-thumb mb-15">
+                                                                            <a href="index-3.html">
+                                                                                <img src="assets/img/header/home-3.jpg" alt="img">
+                                                                           </a>
+                                                                        </div>
+                                                                        <div class="homemenu-content text-center">
+                                                                            <h4 class="homemenu-title">
+                                                                                <a href="index-3.html">
+                                                                                    University
+                                                                                </a>
+                                                                            </h4>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-3 homemenu">
+                                                                        <div class="homemenu-thumb mb-15">
+                                                                            <a href="index-4.html">
+                                                                                <img src="assets/img/header/home-4.jpg" alt="img">
+                                                                           </a>
+                                                                        </div>
+                                                                        <div class="homemenu-content text-center">
+                                                                            <h4 class="homemenu-title">
+                                                                                <a href="index-4.html">
+                                                                                    Kindergarten
+                                                                                </a>
+                                                                            </h4>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-3 homemenu">
+                                                                        <div class="homemenu-thumb mb-15">
+                                                                            <a href="index-5.html">
+                                                                                <img src="assets/img/header/home-5.jpg" alt="img">
+                                                                           </a>
+                                                                        </div>
+                                                                        <div class="homemenu-content text-center">
+                                                                            <h4 class="homemenu-title">
+                                                                                <a href="index-5.html">
+                                                                                    Business Coach
+                                                                                </a>
+                                                                            </h4>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-3 homemenu">
+                                                                        <div class="homemenu-thumb mb-15">
+                                                                            <img src="assets/img/header/home-6.jpg" alt="img">
+                                                                        </div>
+                                                                        <div class="homemenu-content text-center">
+                                                                            <h4 class="homemenu-title">
+                                                                                Coming Soon
+                                                                            </h4>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-3 homemenu">
+                                                                        <div class="homemenu-thumb mb-15">
+                                                                            <img src="assets/img/header/home-6.jpg" alt="img">
+                                                                        </div>
+                                                                        <div class="homemenu-content text-center">
+                                                                            <h4 class="homemenu-title">
+                                                                                Coming Soon
+                                                                            </h4>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-3 homemenu">
+                                                                        <div class="homemenu-thumb mb-15">
+                                                                            <img src="assets/img/header/home-6.jpg" alt="img">
+                                                                        </div>
+                                                                        <div class="homemenu-content text-center">
+                                                                            <h4 class="homemenu-title">
+                                                                                Coming Soon
+                                                                            </h4>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="has-dropdown active d-xl-none">
+                                                    <a href="instructor.html" class="border-none">
+                                                    Home
+                                                    </a>
+                                                    <ul class="submenu">
+                                                        <li><a href="index.html">Education</a></li>
+                                                        <li><a href="index-2.html">Online Course</a></li>
+                                                        <li><a href="index-3.html">University</a></li>
+                                                        <li><a href="index-4.html">Kindergarten</a></li>
+                                                        <li><a href="index-5.html">Business Coach</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="courses-details.html">
+                                                        <span class="head-icon"><i class="fas fa-book"></i></span>
+                                                        Courses
+                                                        <i class="fas fa-chevron-down"></i>
+                                                    </a>
+                                                    <ul class="submenu">
+                                                        <li><a href="courses.html">Courses</a></li>
+                                                        <li><a href="courses-grid.html">Courses Grid</a></li>
+                                                        <li><a href="courses-list.html">Courses List</a></li>
+                                                        <li><a href="courses-details.html">Courses Details 01</a></li>
+                                                        <li><a href="courses-details-2.html">Courses Details 02</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="event-details.html">
+                                                        <span class="head-icon"><i class="fas fa-gift"></i></span>
+                                                        events
+                                                        <i class="fas fa-chevron-down"></i>
+                                                    </a>
+                                                    <ul class="submenu">
+                                                        <li><a href="event.html">event</a></li>
+                                                        <li><a href="event-details.html">event Details</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="has-dropdown">
+                                                    <a href="news-details.html">
+                                                        <span class="head-icon"><i class="fas fa-file-alt"></i></span>
+                                                        Pages
+                                                        <i class="fas fa-chevron-down"></i>
+                                                    </a>
+                                                    <ul class="submenu">
+                                                        <li>
+                                                            <a href="about.html">About Us</a>
+                                                        </li>
+                                                        <li><a href="instructor.html">Instructors</a></li>
+                                                        <li><a href="instructor-details.html">Instructor Details</a></li>
+                                                        <li><a href="program.html">program</a></li>
+                                                        <li><a href="program-details.html">program Details</a></li>
+                                                        <li class="has-dropdown">
+                                                            <a href="shop-details.html">
+                                                                Shop Page
+                                                                <i class="fas fa-angle-right"></i>
+                                                            </a>
+                                                            <ul class="submenu">
+                                                                <li><a href="shop-grid.html">Shop Grid</a></li>
+                                                                <li><a href="shop-list.html">Shop List</a></li>
+                                                                <li><a href="shop-left-sidebar.html">Shop - Left Sidebar</a></li>
+                                                                <li><a href="shop-right-sidebar.html">Shop -  Right Sidebar</a></li>
+                                                                <li><a href="shop-details.html">Product Details</a></li>
+                                                                <li><a href="shop-cart.html">Shop Cart</a></li>
+                                                                <li><a href="checkout.html">Checkout</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><a href="gallery.html">Gallery</a></li>
+                                                        <li><a href="pricing.html">Pricing Plan</a></li>
+                                                        <li><a href="faq.html">Faqs</a></li>
+                                                        <li><a href="sign-in.html">Sign In</a></li>
+                                                        <li><a href="register.html">register</a></li>
+                                                        <li><a href="404.html">404 Error</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="news.html">
+                                                        <span class="head-icon"><i class="fas fa-layer-group"></i></span>
+                                                        Blog
+                                                        <i class="fas fa-chevron-down"></i>
+                                                    </a>
+                                                    <ul class="submenu">
+                                                        <li><a href="news.html">Blog</a></li>
+                                                        <li><a href="news-details.html">Blog Details</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="contact.html">
+                                                        <span class="head-icon"><i class="fas fa-phone-rotary"></i></span>
+                                                        Contact
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div> -->
+                            <!-- </div> -->
+                            <!-- <div class="header-right d-flex justify-content-end align-items-center"> -->
+                             <!-- <div class="header-search">
+                                 <button class="d-flex align-items-center search-toggle"><i class="fas fa-search"></i></button>
+                             </div> -->
+
+                             <!-- <div class="header__hamburger d-xl-none my-auto">
+                                 <div class="sidebar__toggle">
+                                     <i class="fas fa-bars"></i>
+                                 </div>
+                             </div>
+                         </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header> -->
+
+         <!-- Search Section Start -->
+         <!-- <div class="header-search-bar d-flex align-items-center">
+            <button class="search-close">×</button>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="search-bar">
+                            <div class="contact-form-box contact-search-form-box">
+                                <form action="#">
+                                    <input type="email" placeholder="Search here...">
+                                    <button type="submit"><i class="far fa-search"></i></button>
+                                </form>
+                                <p>Type above and press Enter to search. Press Close to cancel.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Hero Section Start -->
+         <section class="hero-section-3 hero-3">
+            <div class="swiper hero-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slider-bg bg-cover" style="background-image: url('assets/img/ctgroup.JPG');">
+                            <div class="overlay-bg bg-cover" ></div>
+                        </div>
+                        <div class="container">
+                            <div class="row g-4 align-items-center justify-content-center">
+                                <div class="col-lg-6">
+                                    <div class="hero-content" id="hero-form">
+                                        <!-- <h6 data-animation="fadeInUp" data-delay="1.3s">Welcome to CT Group</h6> -->
+                                        <!-- <h1 data-animation="fadeInUp"  style="color: #fff !important;">
+                                           Discover Your Path to Success
+                                            with CT Group
+                                        </h1> -->
+                                        <!-- <h1 class="text-white wow fadeInUp">
+                                            Admissions Open 2026
+                                        </h1>
+                                        <h2 class="text-white wow fadeInUp mt-2" data-wow-delay=".2s">
+                                            CTGI – Shahpur Campus
+                                        </h2>
+
+                                        <p class="text-white wow fadeInUp" data-wow-delay=".4s">
+                                            AICTE Approved Programs | Industry-Oriented Curriculum |
+                                            Strong Placement Support
+                                        </p>
+                                        <div class="hero-btn mt-4 wow fadeInUp" data-wow-delay=".6s"> -->
+                                        <!-- <a href="#hero-form" class="theme-btn">
+                                            Apply Now <i class="far fa-chevron-double-right"></i>
+                                        </a> -->
+                                        <!-- <a href="#popular-courses" class="theme-btn border-btn ms-3">
+                                            Explore Programs
+                                        </a>
+                                    </div> -->
+                                        <!-- <p data-animation="fadeInUp" data-delay="1.7s">
+                                            Education is the cornerstone of personal and societal development, providing
+                                            individuals with the knowledge, skills, and tools needed
+                                        </p> -->
+                                        <!-- <div class="hero-button " style="margin-right: 40px;">
+                                            <a href="#popular-courses" data-animation="fadeInUp" class="theme-btn red-btn">Find Your Best Courses</a>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <div class="col-lg-6"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="swiper-slide">
+                        <div class="slider-bg bg-cover" style="background-image: url('assets/img/hero/hero-4.jpg');">
+                            <div class="overlay-bg bg-cover" style="background-image: url('assets/img/hero/ovelay-bg.png');"></div>
+                        </div>
+                        <div class="container">
+                            <div class="row g-4 align-items-center justify-content-center">
+                                <div class="col-lg-12">
+                                    <div class="hero-content">
+                                        <h6 data-animation="fadeInUp" data-delay="1.3s">Welcome to Eduspace</h6>
+                                        <h1 data-animation="fadeInUp" data-delay="1.5s">
+                                            Unlock Your Potential
+                                            with Eduspace
+                                        </h1>
+                                        <p data-animation="fadeInUp" data-delay="1.7s">
+                                            Education is the cornerstone of personal and societal development, providing
+                                            individuals with the knowledge, skills, and tools needed
+                                        </p>
+                                        <div class="hero-button">
+                                            <a href="#popular-courses" data-animation="fadeInUp" data-delay="1.9s" class="theme-btn red-btn">Find Your Best Courses</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider-bg bg-cover" style="background-image: url('assets/img/hero/hero-5.jpg');">
+                            <div class="overlay-bg bg-cover" style="background-image: url('assets/img/hero/ovelay-bg.png');"></div>
+                        </div>
+                        <div class="container">
+                            <div class="row g-4 align-items-center justify-content-center">
+                                <div class="col-lg-12">
+                                    <div class="hero-content">
+                                        <h6 data-animation="fadeInUp" data-delay="1.3s">Welcome to Eduspace</h6>
+                                        <h1 data-animation="fadeInUp" data-delay="1.5s">
+                                            Unlock Your Potential
+                                            with Eduspace
+                                        </h1>
+                                        <p data-animation="fadeInUp" data-delay="1.7s">
+                                            Education is the cornerstone of personal and societal development, providing
+                                            individuals with the knowledge, skills, and tools needed
+                                        </p>
+                                        <div class="hero-button">
+                                            <a href="#popular-courses" data-animation="fadeInUp" data-delay="1.9s" class="theme-btn red-btn">Find Your Best Courses</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <!-- <div class="array-button">
+                    <button class="array-prev"><i class="far fa-chevron-left"></i></button>
+                    <button class="array-next"><i class="far fa-chevron-right"></i></button>
+                </div> -->
+            </div>
+            <!-- <div class="feature-section-3 style-margin-top section-padding pb-0">
+                <div class="container">
+                    <div class="feature-wrapper-3">
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                                <div class="feature-card-items">
+                                    <div class="icon">
+                                        <i class="flaticon-graduation"></i>
+                                    </div>
+                                    <div class="content">
+                                        <h5>Scholarship Facility</h5>
+                                        <p>
+                                                <div class="hero-content">
+                                                <h6>Welcome to CT Group</h6> -->
+                                                    <!-- <h1 data-animation="fadeInUp" data-delay="1.5s" style="color: #fff !important;">
+                                                        Discover Your Path to Success<br>with CT Group
+                                                    </h1>
+                            <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                                <div class="feature-card-items">
+                                    <div class="icon">
+                                        <i class="flaticon-instructor"></i>
+                                    </div>
+                                    <div class="content">
+                                        <h5>Expert Instructors</h5>
+                                        <p>
+                                            Scholarship facility provides
+                                            financial assistance
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".6s">
+                                <div class="feature-card-items">
+                                    <div class="icon">
+                                        <i class="flaticon-certficate"></i>
+                                    </div>
+                                    <div class="content">
+                                        <h5>Certificate Program</h5>
+                                        <p>
+                                            Scholarship facility provides
+                                            financial assistance
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".8s">
+                                <div class="feature-card-items">
+                                    <div class="icon">
+                                        <i class="flaticon-school"></i>
+                                    </div>
+                                    <div class="content">
+                                        <h5>Graduate Admissions</h5>
+                                        <p>
+                                            Scholarship facility provides
+                                            financial assistance
+                                        </p>
+                                    </div> -->
+                                <!-- </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  -->
+        </section>
+
+        <!-- About Section Start -->
+        <div class="about-section-3 section-padding">
+    <div class="container">
+        <div class="about-wrapper-2">
+            <div class="row g-4 justify-content-between">
+                
+                <!-- Content -->
+                <div class="col-xl-6 col-lg-6">
+                    <div class="about-content">
+                        <div class="section-title">
+                            <h6 class="text-white wow fadeInUp" style="font-weight: 10px;">
+                                Established in 1997
+                            </h6><br>
+                            <span class="ctgi wow fadeInUp" style="font-size:40px; font-weight: 800;" data-wow-delay=".3s">
+                                Why study at Shahpur Campus?
+                            </span>
+                        </div>
+
+                        <p class="mt-3 mt-md-0 wow fadeInUp" style="font-size:14px; line-height:1.7; " data-wow-delay=".5s">
+                        CT Group of Institutions, Shahpur Campus is a future-ready education hub focused on excellence, skills, and career growth. With NAAC ‘A’ Grade accreditation, industry-aligned programs, and strong placement support, students are prepared for corporate roles, entrepreneurship, and research-driven careers.
+                    </p>
+
+                    <div class="row about-points wow fadeInUp mt-3" data-wow-delay=".6s">
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2 text-white text-lg-start">
+                                    <i class="fas fa-check-circle point-icon me-2"></i>
+                                    PhD-qualified faculty with industry mentors
+                                </li>
+                                <li class="mb-2 text-white text-lg-start">
+                                    <i class="fas fa-check-circle point-icon me-2"></i>
+                                    Advanced labs & smart classrooms
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2 text-white text-lg-start">
+                                    <i class="fas fa-check-circle point-icon me-2"></i>
+                                    Skill training, certifications & internships
+                                </li>
+                                <li class="mb-2 text-white text-lg-start">
+                                    <i class="fas fa-check-circle point-icon me-2"></i>
+                                    Dedicated placement & career guidance
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                        <a href="#" class="theme-btn red-btn wow fadeInUp" data-wow-delay=".3s">
+                            Apply Now <i class="far fa-chevron-double-right"></i>
+                        </a>
+
+                        <div class="about-counter-items">
+                            <div class="counter-content wow fadeInUp" data-wow-delay=".3s">
+                                <h3><span class="odometer" data-count="28">00</span>+</h3>
+                                <p>Years of Academic Legacy</p>
+                            </div>
+                            <div class="counter-content wow fadeInUp" data-wow-delay=".5s">
+                                <h3><span class="odometer" data-count="100">00</span>%</h3>
+                                <p>Placement Guidance & Support</p>
+                            </div>
+                        </div>
+
+                        <!-- Highlights -->
+                        <!-- <ul class="text-white mt-4 wow fadeInUp" data-wow-delay=".7s">
+                            <li>• Highly Qualified PhD Faculty & Industry Professionals</li>
+                            <li>• Advanced Laboratories and Smart Learning Spaces</li>
+                            <li>• Skill-Oriented Programs with Certifications</li>
+                            <li>• International Exposure & Corporate Internships</li>
+                            <li>• Dedicated Career Development & Placement Cell</li>
+                            <li>• Communication, Leadership & Personality Grooming</li>
+                            <li>• Dynamic Campus Culture with Events & Activities</li>
+                            <li>• Innovation, Startup & Entrepreneurship Support</li>
+                        </ul> -->
+                    </div>
+                </div>
+
+                <!-- Image -->
+                <div class="col-xl-5 col-lg-6">
+                    <div class="about-image">
+                        <img src="assets/img/about/student.png" alt="img" class="wow img-custom-anim-left">
+                        <div class="bg-shape">
+                            <img src="assets/img/about/bg-shape.png" alt="img">
+                        </div>
+                        <div class="counter-box">
+                            <p>Serving Over</p>
+                            <h2><span class="odometer" data-count="4500">00</span>+</h2>
+                            <p>Students Every Year</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+        </div>
+
+         <!-- Marquee Section Start -->
+        <div class="marquee-section section-padding border-bottom">
+            <div class="mycustom-marque style-3">
+                <div class="scrolling-wrap">
+                    <div class="comm">
+                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> CT Group</div>
+                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> NAAC A</div>
+                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> Career Ready</div>
+                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> Skill Driven</div>
+                    </div>
+                    <div class="comm">
+                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> CT Group</div>
+                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> NAAC A</div>
+                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> Career Ready</div>
+                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> Skill Driven</div>
+                    </div>
+                     <div class="comm">
+                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> CT Group</div>
+                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> NAAC A</div>
+                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> Career Ready</div>
+                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> Skill Driven</div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- Popular Courses Section Start -->
+        <section id="popular-courses" class="admission-programs">
+            <div class="container">
+
+                <!-- Heading -->
+                <div class="admission-heading">
+                <h6>Programs Offered</h6>
+                <h2>Choose a program aligned with your career goals</h2>
+                <!-- <p>Admissions Open for the Following Programs</p> -->
+                </div>
+
+                <!-- Tabs -->
+                <div class="program-tabs ">
+                <button class="tab-btn  active" onclick="openProgram(event,'matric')">After Matric</button>
+                <button class="tab-btn " onclick="openProgram(event,'plus2')">After +2 / Diploma</button>
+                <button class="tab-btn" onclick="openProgram(event,'graduation')">After Graduation</button>
+                </div>
+
+                <!-- ================= AFTER MATRIC ================= -->
+                <div id="matric" class="program-tab-content active">
+                <h3 class="program-level">After Matric (10th)</h3>
+
+                <table class="program-table">
+                    <thead>
+                    <tr>
+                        <th width="22%">Department</th>
+                        <th>Programs Offered</th>
+                        <th width="15%">Duration</th>
+                        <th width="18%">Eligibility</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr>
+                        <td>School Education</td>
+                        <td>
+                        <ul class="course-list">
+                        <li>10+1 Arts</li>
+                        <li>10+1 Commerce</li>
+                        <li>10+1 Medical</li>
+                        <li>10+1 Non-Medical</li>
+                        </ul>
+                        </td>
+                        <td>1 Year</td>
+                        <td>Passed Class 10</td>
+                    </tr>
+                    <tr>
+                        <td>School Education</td>
+                        <td>
+                        <ul class="course-list">
+                        <li>10+2 Arts</li>
+                        <li>10+2 Commerce</li>
+                        <li>10+2 Medical</li>
+                        <li>10+2 Non-Medical</li>
+                        </ul>
+                        </td>
+                        <td>1 Year</td>
+                        <td>Passed Class 11</td>
+                    </tr>
+
+                    <tr>
+                        <td>Polytechnic Engineering</td>
+                        <td>
+                            <ul class="course-list">
+                        <li>Diploma in Civil Engineering</li>     
+                        <li>Diploma in Mechanical Engineering</li>
+                        <li>Diploma in Electrical Engineering</li>
+                        <li>Diploma in Electronics and Communication Engineering</li>
+                        <li>Diploma in Computer Science Engineering</li>
+                        </ul>
+                        </td>
+                        <td>3 Years</td>
+                        <td>Passed Class 10</td>
+                    </tr>
+
+                    <tr>
+                        <td>Healthcare</td>
+                        <td>
+                            <ul class="course-list">
+                        <li>Diploma in Medical Laboratory Technology (DMLT)</li>
+                        <li>Diploma in Pharmacy</li>
+                        </ul>
+                        </td>
+                        <td>2 Years</td>
+                        <td>Passed Class 10</td>
+                    </tr>
+
+                    <tr>
+                        <td>Early Childhood Education</td>
+                        <td> 
+                            <ul class="course-list">
+                        <li>Diploma in Early Childhood Care and Education (ECCE)</li>
+                        </ul>
+                        </td>
+                        <td>1 Year</td>
+                        <td>Passed Class 10</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+                </div>
+
+                <!-- ================= AFTER +2 / DIPLOMA ================= -->
+                <div id="plus2" class="program-tab-content">
+                <h3 class="program-level">After +2 / Diploma</h3>
+
+                <table class="program-table">
+                    <thead>
+                    <tr>
+                        <th width="22%">Department</th>
+                        <th>Programs Offered</th>
+                        <th width="15%">Duration</th>
+                        <th width="18%">Eligibility</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr>
+                        <td>Engineering & Technology</td>
+                        <td>
+                            <ul class="course-list">       
+                       <li>Bachelor of Technology in Civil Engineering (Regular / LEET)</li>
+                        <li>Bachelor of Technology in Mechanical Engineering (Regular / LEET)</li>
+                        <li>Bachelor of Technology in Electrical Engineering (Regular / LEET)</li>
+                        <li>Bachelor of Technology in Electronics and Communication Engineering (Regular / LEET)</li>
+                        <li>Bachelor of Technology in Computer Science Engineering (Regular / LEET)</li>
+                        <li>Bachelor of Technology in Computer Science Engineering – Internet of Things</li>
+                        <li>Bachelor of Technology in Computer Science Engineering – Artificial Intelligence and Machine Learning</li>
+                        </td>
+                        <td>4 Years / 3 Years (LEET)</td>
+                        <td>10+2 (Non-Medical) / Diploma</td>
+                    </tr>
+
+                    <tr>
+                        <td>Architecture & Design</td>
+                        <td>
+                            <ul class="course-list">
+                        <li></li>Bachelor of Architecture</li>
+                        <li>Bachelor of Design (Interior Design)</li>
+                        </ul>
+                        </td>
+                        <td>5 Years / 4 Years</td>
+                        <td>10+2</td>
+                    </tr>
+
+                    <tr>
+                        <td>Management & Commerce</td>
+                        <td>
+                            <ul class="course-list">    
+                        <li>Bachelor of Business Administration (GNDU / PTU)</li>
+                        <li>Bachelor of Commerce (GNDU)</li>
+                        <li>Bachelor of Commerce (Honours)</li>
+                        </ul>
+                        </td>
+                        <td>3 Years</td>
+                        <td>10+2</td>
+                    </tr>
+
+                    <tr>
+                        <td>Computer Applications</td>
+                        <td>
+                            <ul class="course-list">
+                                <li>Bachelor of Computer Applications</li>
+                            </ul>
+                        </td>
+                        <td>3 Years</td>
+                        <td>10+2</td>
+                    </tr>
+
+                    <tr>
+                        <td>Hospitality & Tourism</td>
+                        <td> 
+                        <ul class="course-list">
+                            <li>Bachelor of Hotel Management and Catering Technology</li>
+                            <li>Bachelor of Science Hospitality and Hotel Administration</li>
+                            <li>Bachelor of Tourism and Travel Management</li>
+                            <li>Diploma in Food Production (GNDU)</li>
+                            <li>Craftsmanship Course in Food Production & Patisserie</li>
+                        </ul>
+                        </td>
+                        <td>3 – 4 Years / 1 Year</td>
+                        <td>10+2</td>
+                    </tr>
+
+                    <tr>
+                        <td>Healthcare & Sciences</td>
+                        <td> 
+                        <ul class="course-list">
+                            <li>Bachelor of Science Biotechnology</li>
+                            <li>Bachelor of Science Medical Laboratory Science</li>
+                            <li>Bachelor of Physiotherapy</li>
+                        </ul>
+                        </td>
+                        <td>3 – 4 Years</td>
+                        <td>10+2 (Medical)</td>
+                    </tr>
+
+                    <tr>
+                        <td>Pharmaceutical Sciences</td>
+                        <td>
+                        <ul class="course-list">
+                            <li>Bachelor of Pharmacy (Regular / LEET)</li>
+                            <li>Doctor of Pharmacy</li>
+                        </ul>
+                        </td>
+                        <td>4 Years / 6 Years</td>
+                        <td>10+2 (Medical)</td>
+                    </tr>
+
+                    <tr>
+                        <td>Law</td>
+                        <td>
+                        <ul class="course-list">
+                            <li>Bachelor of Arts and Bachelor of Laws</li>
+                            <li>Bachelor of Commerce and Bachelor of Laws</li>
+                        </ul>
+                        </td>
+                        <td>5 Years</td>
+                        <td>10+2</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+                </div>
+
+                <!-- ================= AFTER GRADUATION ================= -->
+                <div id="graduation" class="program-tab-content">
+                <h3 class="program-level">After Graduation</h3>
+
+                <table class="program-table">
+                    <thead>
+                    <tr>
+                        <th width="22%">Department</th>
+                        <th>Programs Offered</th>
+                        <th width="15%">Duration</th>
+                        <th width="18%">Eligibility</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr>
+                        <td>Management</td>
+                        <td>
+                        <ul class="course-list">
+                            <li>Master of Business Administration (HR / Finance / Marketing)</li>
+                        </ul>
+                        </td>
+                        <td>2 Years</td>
+                        <td>Any Graduation</td>
+                    </tr>
+
+                    <tr>
+                        <td>Engineering</td>
+                        <td>
+                        <ul class="course-list">
+                            <li>Master of Technology in Computer Science Engineering</li>
+                            <li>Master of Technology in Electronics and Communication Engineering</li>
+                        </ul>
+                        </td>
+                        <td>2 Years</td>
+                        <td>B.Tech / Equivalent</td>
+                    </tr>
+
+                    <tr>
+                        <td>Computer Applications</td>
+                        <td>
+                        <ul class="course-list">
+                            <li>Master of Computer Applications</li>
+                            <li>Post Graduate Diploma in Computer Applications</li>
+                        </ul>
+                        </td>
+                        <td>2 Years / 1 Year</td>
+                        <td>Graduation</td>
+                    </tr>
+
+                    <tr>
+                        <td>Pharmaceutical Sciences</td>
+                        <td>
+                        <ul class="course-list">
+                            <li>Master of Pharmacy</li>
+                            <li>Doctor of Pharmacy – Post Baccalaureate</li>
+                        </ul>
+                        </td>
+                        <td>2 Years / 3 Years</td>
+                        <td>B.Pharmacy</td>
+                    </tr>
+
+                    <tr>
+                        <td>Education</td>
+                        <td>
+                            <ul class="course-list">
+                            <li>Bachelor of Education</li>
+                            <li>Master of Education</li>    
+                        </ul>
+                        </td>
+                        <td>2 Years</td>
+                        <td>Graduation / B.Ed</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+                </div>
+
+            </div>
+        </section>
+
+
+        
+
+        <!-- Counter Section -->
+        <section>
+            <div class="counter-section-2 pt-0">
+                <div class="counter-wrapper-2 bg-cover" style="background-image: url('assets/img/counter-bg-4.jpg.png');">
+
+                <div class="counter-items wow fadeInUp" data-wow-delay=".2s">
+                    <div class="icon"></div>
+                    <div class="content">
+                    <h2 style="font-size:90px ; ">
+                        <span class="odometer" style="font-size:90px !important ;" data-count="28">00</span>+
+                    </h2>
+                    <p class="counter-text">Years of Legacy</p>
+                    </div>
+                </div>
+
+                <div class="counter-items wow fadeInUp" data-wow-delay=".4s">
+                    <div class="icon"></div>
+                    <div class="content">
+                    <h2 style="font-size:90px;">88<span style="font-size:20px;"> LPA</span></h2>
+                    <p class="counter-text">Highest Package</p>
+                    </div>
+                </div>
+
+                <div class="counter-items wow fadeInUp" data-wow-delay="1s">
+                    <div class="icon"></div>
+                    <div class="content">
+                    <h2 style="font-size:90px;">1<span style="font-size:20px;"> Lac</span>+</h2>
+                    <p class="counter-text">Alumni Network</p>
+                    </div>
+                </div>
+
+                <div class="counter-items wow fadeInUp naac-counter" data-wow-delay=".6s">
+                    <div class="icon naac-logo">
+                    <img src="assets/img/header/nav_logo2.png" alt="NAAC A Accredited">
+                    </div>
+                    <div class="content">
+                    <p class="counter-text">NAAC ‘A’ Accredited</p>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="placement-section">
+        <div class="container-fluid">
+
+            <!-- Heading -->
+            <div class="placement-heading">
+            <!-- <h6>Placements</h6> -->
+            <h2>Outstanding Placement Records</h2>
+            <p>Our students placed in top national & international organizations</p>
+            </div>
+
+            <!-- Placement Images -->
+            <!-- <div class="placement-gallery">
+            <div class="placement-card">
+                <img src="assets/img/placement/p1.png" alt="Top Placements">
+            </div>
+
+            <div class="placement-card">
+                <img src="assets/img/placement/p2.png" alt="Student Placements">
+            </div>
+
+            <div class="placement-card">
+                <img src="assets/img/placement/p3.png" alt="Top Placements">
+            </div>
+
+            <div class="placement-card">
+                <img src="assets/img/placement/p4.png" alt="Top Placements">
+            </div>
+
+            </div> -->
+            <div class="banner">
+                <img src="assets/img/placement/placement-banner.jpg" alt="Banner" style="width: 100%; height: auto;">
+            </div>
+        </div>
+        </section>
+
+        <!-- Marquee Section Start -->
+        <div class="container recruiter-heading py-5" id="logos">
+            
+    
+            <!-- <h6>Recruiters at CT Group</h6> -->
+            <h2 class="mb-3 ">Major Recruiters </h2>
+            <!-- <h2 class="mb-3 "> Our Placement Support</h2> -->
+            <!-- <p class="text-center text-dark_text px-3 px-sm-4 px-md-5 px-lg-5 font-weight-bold mb-4 fs-6" >
+                We support students throughout their academic journey with career guidance,
+            industry exposure, and placement assistance to help them step confidently
+            into the professional world.
+            </p> -->
+            
+            <div class="marquee-container row">
+                <div class="marquee-content marquee-left col-lg-12" id="marquee1"></div>
+            </div>
+            
+            <div class="marquee-container">
+                <div class="marquee-content marquee-right col-lg-12" id="marquee2"></div>
+            </div>
+        </div>
+
+    
+        
+        <!-- <section class="popular-courses-section-33 section-padding" style="background-color: var(--bg7);"> -->
+  <!-- <div class="container"> -->
+
+    <!-- Section Title -->
+    <!-- <div class="section-title  text-center">
+      <h6>Popular Courses</h6>
+      <h2>Academic Programs</h2>
+      <p class="mt-2">Choose the right program for your future</p>
+    </div> -->
+
+    <!-- Tabs -->
+    <!-- <ul class="nav justify-content-center mt-4" role="tablist">
+      <li class="nav-item">
+        
+        <a class="nav-link active" data-bs-toggle="tab" href="#ug">Under Graduate</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="tab" href="#pg">Post Graduate</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="tab" href="#diploma">Diploma</a>
+      </li>
+    </ul> -->
+
+    <!-- Tab Content -->
+    <!-- <div class="tab-content mt-4"> -->
+
+      <!-- UG -->
+      <!-- <div class="tab-pane fade show active" id="ug">
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped align-middle">
+            <thead>
+              <tr>
+                <th>Department</th>
+                <th>Courses</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Architecture & Design</td>
+                <td>
+                  Bachelor in Architecture (B.Arch)<br>
+                  Bachelor of Vocational Education in Interior Design (B.Voc – Interior Designing)<br>
+                  Bachelor of Science in Fashion Designing (B.Sc. F.D)
+                </td>
+              </tr>
+              <tr>
+                <td>Engineering & Technology</td>
+                <td>
+                  Bachelor of Technology – Computer Science & Engineering (B.Tech CSE)<br>
+                  Bachelor of Technology – Artificial Intelligence & Machine Learning (B.Tech AI & ML)<br>
+                  Bachelor of Technology – Electronics & Communication Engineering (B.Tech ECE)<br>
+                  Bachelor of Technology – Civil Engineering (B.Tech CE)<br>
+                  Bachelor of Technology – Mechanical Engineering (B.Tech ME)<br>
+                  Bachelor of Technology – Lateral Entry (B.Tech LEET)
+                </td>
+              </tr>
+              <tr>
+                <td>Law</td>
+                <td>
+                  Bachelor of Arts & Bachelor of Legislative Law (B.A. LLB)<br>
+                  Bachelor of Commerce & Bachelor of Legislative Law (B.Com LLB)
+                </td>
+              </tr>
+              <tr>
+                <td>Management & Commerce</td>
+                <td>
+                  Bachelor of Business Administration (BBA)<br>
+                  Bachelor of Commerce (B.Com)<br>
+                  Bachelor of Commerce (Honours) – B.Com (Hons)
+                </td>
+              </tr>
+              <tr>
+                <td>Computer Applications</td>
+                <td>
+                  Bachelor of Computer Applications (BCA)<br>
+                  Bachelor of Vocation in Software Development (B.Voc – SD)
+                </td>
+              </tr>
+              <tr>
+                <td>Science & Healthcare</td>
+                <td>
+                  Bachelor of Science in Biotechnology (B.Sc Biotech)<br>
+                  Bachelor in Physiotherapy (BPT)<br>
+                  Bachelor of Science in Medical Laboratory Science (B.Sc MLS)
+                </td>
+              </tr>
+              <tr>
+                <td>Hospitality & Tourism</td>
+                <td>
+                  Bachelor of Hotel Management & Catering Technology (BHMCT)<br>
+                  Bachelor of Science in Hospitality & Hotel Administration (B.Sc HHA)<br>
+                  Bachelor of Tourism & Travel Management (BTTM)<br>
+                  Bachelor of Vocation in Hospitality & Catering Management (B.Voc HCM)
+                </td>
+              </tr>
+              <tr>
+                <td>Pharmacy</td>
+                <td>
+                  Bachelor of Pharmacy (B.Pharm – CTIPS)<br>
+                  Bachelor of Pharmacy (B.Pharm – CTCP)<br>
+                  Bachelor of Pharmacy – Lateral Entry (B.Pharm LEET – CTIPS)<br>
+                  Bachelor of Pharmacy – Lateral Entry (B.Pharm LEET – CTCP)<br>
+                  Doctor of Pharmacy (Pharm.D – CTIPS)<br>
+                  Doctor of Pharmacy (Pharm.D – CTCP)
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div> -->
+
+      <!-- PG -->
+      <!-- <div class="tab-pane fade" id="pg">
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped align-middle">
+            <thead>
+              <tr>
+                <th>Department</th>
+                <th>Courses</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Management Studies</td>
+                <td>Master of Business Administration (MBA – HR / Finance / Marketing)</td>
+              </tr>
+              <tr>
+                <td>Engineering & Technology</td>
+                <td>
+                  Master of Technology – Computer Science Engineering (M.Tech CSE)<br>
+                  Master of Technology – Mechanical Engineering (M.Tech ME)
+                </td>
+              </tr>
+              <tr>
+                <td>Computer Applications</td>
+                <td>Master of Computer Applications (MCA)</td>
+              </tr>
+              <tr>
+                <td>Science</td>
+                <td>
+                  Master of Science in Biotechnology (M.Sc Biotechnology)<br>
+                  Master of Science in Fashion Designing (M.Sc Fashion Designing)
+                </td>
+              </tr>
+              <tr>
+                <td>Pharmacy (CTIPS)</td>
+                <td>
+                  Master of Pharmacy – Pharmaceutics (M.Pharm)<br>
+                  Master of Pharmacy – Pharmacology (M.Pharm)<br>
+                  Master of Pharmacy – Pharmaceutical Chemistry (M.Pharm)<br>
+                  Doctor of Pharmacy – Post Baccalaureate (Pharm.D PB)
+                </td>
+              </tr>
+              <tr>
+                <td>Pharmacy (CTCP)</td>
+                <td>
+                  Master of Pharmacy – Pharmaceutics (M.Pharm)<br>
+                  Master of Pharmacy – Pharmacology (M.Pharm)<br>
+                  Master of Pharmacy – Pharmaceutical Chemistry (M.Pharm)<br>
+                  Doctor of Pharmacy – Post Baccalaureate (Pharm.D PB)
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div> -->
+
+      <!-- Diploma -->
+      <!-- <div class="tab-pane fade" id="diploma">
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped align-middle">
+            <thead>
+              <tr>
+                <th>Department</th>
+                <th>Courses</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Engineering Diploma</td>
+                <td>
+                  Diploma in Computer Science Engineering (CSE)<br>
+                  Diploma in Electronics & Communication Engineering (ECE)<br>
+                  Diploma in Mechanical Engineering (ME)<br>
+                  Diploma in Electrical Engineering (EE)<br>
+                  Diploma in Civil Engineering (CE)
+                </td>
+              </tr>
+              <tr>
+                <td>Healthcare & Pharmacy</td>
+                <td>
+                  Diploma in Pharmacy (D.Pharm – CTIPS)<br>
+                  Diploma in Pharmacy (D.Pharm – CTCP)<br>
+                  Diploma in Medical Laboratory Technology (DMLT)
+                </td>
+              </tr>
+              <tr>
+                <td>Education & Hospitality</td>
+                <td>
+                  Diploma in Elementary Education (D.El.Ed)<br>
+                  Diploma in Food Production (DFP)<br>
+                  Craftsmanship Certificate Course in Food Production & Patisserie (CCFP)
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div> -->
+  <!-- </div> -->
+        <!-- </section> -->
+
+
+        <!-- Event Section Start -->
+        <!-- <section class="event-section pt-0 fix section-padding">
+            <div class="container">
+                <div class="section-title color-red text-center">
+                    <h6 class="wow fadeInUp">
+                        Upcoming Events
+                    </h6>
+                    <h2 class="wow fadeInUp" data-wow-delay=".3s">
+                        Webinar on Emerging Trends
+                    </h2>
+                </div>
+                <div class="event-wrapper mt-3 mt-md-0">
+                    <div class="row g-0">
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                            <div class="event-card-items bg-cover" style="background-image: url('assets/img/event/02.jpg');">
+                                <div class="post-cat">
+                                    Sep 13, 2024
+                                </div>
+                                <div class="content">
+                                    <h4>
+                                        <a href="event-details.html">
+                                            Campus Innovation Day
+                                            Exploring Research
+                                        </a>
+                                    </h4>
+                                    <ul class="date-list">
+                                        <li>
+                                            <i class="far fa-map-marker-alt"></i>
+                                            New York
+                                        </li>
+                                        <li>
+                                            <i class="far fa-clock"></i>
+                                            09:30am
+                                        </li>
+                                    </ul>
+                                    <a href="event-details.html" class="theme-btn red-btn">View Events</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                            <div class="event-card-items active bg-cover" style="background-image: url('assets/img/event/11.jpg');">
+                                <div class="post-cat">
+                                    Sep 13, 2024
+                                </div>
+                                <div class="content">
+                                    <h4>
+                                        <a href="event-details.html">
+                                            Leadership Summit the
+                                            Shaping Tomorrow's
+                                        </a>
+                                    </h4>
+                                    <ul class="date-list">
+                                        <li>
+                                            <i class="far fa-map-marker-alt"></i>
+                                            New York
+                                        </li>
+                                        <li>
+                                            <i class="far fa-clock"></i>
+                                            09:30am
+                                        </li>
+                                    </ul>
+                                    <a href="event-details.html" class="theme-btn red-btn">View Events</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".6s">
+                            <div class="event-card-items bg-cover" style="background-image: url('assets/img/event/12.jpg');">
+                                <div class="post-cat">
+                                    Sep 13, 2024
+                                </div>
+                                <div class="content">
+                                    <h4>
+                                        <a href="event-details.html">
+                                            Global Education Expo Study and Programs
+                                        </a>
+                                    </h4>
+                                    <ul class="date-list">
+                                        <li>
+                                            <i class="far fa-map-marker-alt"></i>
+                                            New York
+                                        </li>
+                                        <li>
+                                            <i class="far fa-clock"></i>
+                                            09:30am
+                                        </li>
+                                    </ul>
+                                    <a href="event-details.html" class="theme-btn red-btn">View Events</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".8s">
+                            <div class="event-card-items bg-cover" style="background-image: url('assets/img/event/13.jpg');">
+                                <div class="post-cat">
+                                    Sep 13, 2024
+                                </div>
+                                <div class="content">
+                                    <h4>
+                                        <a href="event-details.html">
+                                            Global Education Expo Study and Programs
+                                        </a>
+                                    </h4>
+                                    <ul class="date-list">
+                                        <li>
+                                            <i class="far fa-map-marker-alt"></i>
+                                            New York
+                                        </li>
+                                        <li>
+                                            <i class="far fa-clock"></i>
+                                            09:30am
+                                        </li>
+                                    </ul>
+                                    <a href="event-details.html" class="theme-btn red-btn">View Events</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <section class="campus-life-collage-section">
+            <div class="container">
+
+            ```
+            <h2 class="section-title text-white text-center mb-4">
+            LIFE AT CTGI SHAHPUR CAMPUS
+            </h2>
+            <p class="text-light opacity-75">
+            Learn, grow and succeed in a vibrant & safe campus environment
+            </p>
+
+            <!-- 2x2 Grid -->
+            <div class="row g-3 justify-content-center">
+
+            <!-- Photo 1: Classroom / Lab -->
+            <div class="col-lg-3 col-md-6 col-6 ">
+                <img src="assets/img/campus-life/campus-life28.jpeg"
+                    class="img-fluid campus-img"
+                    width="400" height="300"
+                    alt="Art"
+                    loading="eager"
+                    fetchpriority="high">
+            </div>
+
+            <!-- Photo 2: Teacher Student Interaction -->
+            <div class="col-lg-3 col-md-6 col-6 ">
+                <img src="assets/img/campus-life/campus-life23.webp"
+                    class="img-fluid campus-img"
+                    width="400" height="300"
+                    alt="Campus life activities"
+                    loading="eager"
+                    fetchpriority="high">
+            </div>
+
+            <!-- Photo 3: Campus Activity / Event -->
+            <div class="col-lg-3 col-md-6 col-6 ">
+                <img src="assets/img/campus-life/campus-life25.jpg"
+                    class="img-fluid campus-img"
+                    width="400" height="300"
+                    alt="Sports activities"
+                    loading="eager"
+                    fetchpriority="high">
+            </div>
+
+            <!-- Photo 4: Infrastructure -->
+            <div class="col-lg-3 col-md-6 col-6 ">
+                <img src="assets/img/campus-life/campus-life35.JPG"
+                    class="img-fluid campus-img"
+                    width="400" height="300"
+                    alt="Teacher guiding students"
+                    loading="eager"
+                    fetchpriority="high">
+            </div>
+
+            </div>
+
+            <!-- CTA -->
+            <!-- <div class="text-center mt-4 slideUp">
+            <a href="#admission-form" class="btn btn-warning px-4 py-2 fw-semibold">
+                Apply for Admission 2026
+            </a>
+            </div> -->
+            ```
+
+            </div>
+        </section>
+
+
+        
+
+
+        
+            
+         <!-- Life at CT -->
+        <!-- <section class="navigate-section">
+        <div class="container navigate-wrap"> -->
+
+            <!-- LEFT -->
+            <!-- <div class="navigate-left">
+            <h2>Life at CT</h2>
+                <p class="mb-4">
+                    Discover a vibrant campus culture filled with learning, creativity,
+                    sports, events, and unforgettable student experiences that shape
+                    your journey beyond academics.
+                </p> -->
+
+            <!-- Curved Arrow -->
+            <!-- <svg class="curve-arrow" viewBox="0 0 300 300">
+                <path d="M40,40 C40,200 200,220 260,260" />
+                <polygon points="245,250 275,260 255,235" />
+            </svg>
+
+            <a href="#popular-courses" class="view-all-btn">View All Program</a>
+            </div> -->
+
+            <!-- RIGHT -->
+            <!-- <div class="navigate-right">
+
+            <div class="nav-card " onclick="openLightbox(this)">
+                <img src="assets/img/campus-life/campus-life26.jpg">
+                <div class="nav-title">Cultural Fest <span>↗</span></div>
+            </div>
+
+
+            <div class="nav-card" onclick="openLightbox(this)">
+                <img src="assets/img/campus-life/campus-life27.jpeg">
+                <div class="nav-title">Arts & Creativity <span>↗</span></div>
+            </div>
+
+            <div class="nav-card " onclick="openLightbox(this)">
+                <img src="assets/img/campus-life/campus-life24.jpeg">
+                <div class="nav-title">Recreation & Wellness <span>↗</span></div>
+            </div>
+
+            <div class="nav-card " onclick="openLightbox(this)">
+                <img src="assets/img/campus-life/campus-life25.jpg">
+                <div class="nav-title">Sports & Fitness <span>↗</span></div>
+            </div>
+
+            <div class="nav-card " onclick="openLightbox(this)">
+                <img src="assets/img/campus-life/campus-life30.jpeg">
+                <div class="nav-title">Byteverse 1.O Hackathon <span>↗</span></div>
+            </div>
+
+            <div class="nav-card " onclick="openLightbox(this)">
+                <img src="assets/img/campus-life/campus-life13.jpg">
+                <div class="nav-title">Campus Student Life <span>↗</span></div>
+            </div>
+            
+            
+            </div>
+        </div>
+        </section> -->
+
+        <!-- Lightbox Modal -->
+        <!-- <div id="lightbox" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; justify-content: center; align-items: center;">
+            <img id="lightboxImg" src="" alt="" style="max-width: 90%; max-height: 90%;">
+            <span onclick="closeLightbox()" style="position: absolute; top: 20px; right: 30px; color: white; font-size: 30px; cursor: pointer;">&times;</span>
+        </div> -->
+
+        <!-- <section class="testimonial-section-3 fix pt-4 section-padding bg-cover" style="background-image: url('assets/img/testimonial/bg.jpg');"> -->
+            <!-- <div class="counter-section-2 section-padding pt-0">
+                <div class="container custom-container">
+                    <div class="counter-wrapper-2 bg-cover" style="background-image: url('assets/img/counter-bg.jpg');">
+                        <div class="counter-items wow fadeInUp" data-wow-delay=".2s">
+                            <div class="icon">
+                                <i class="flaticon-success"></i>
+                            </div>
+                            <div class="content">
+                                <h2><span class="odometer" data-count="48.5">00</span>k</h2>
+                                <p>Student Enrolled</p>
+                            </div>
+                        </div>
+                        <div class="counter-items wow fadeInUp" data-wow-delay=".4s">
+                            <div class="icon">
+                                <i class="flaticon-medal"></i>
+                            </div>
+                            <div class="content">
+                                <h2><span class="odometer" data-count="100">00</span>+</h2>
+                                <p>Awards Winning</p>
+                            </div>
+                        </div>
+                        <div class="counter-items wow fadeInUp" data-wow-delay=".6s">
+                            <div class="icon">
+                                <i class="flaticon-satisfaction"></i>
+                            </div>
+                            <div class="content">
+                                <h2><span class="odometer" data-count="99">00</span>%</h2>
+                                <p>Satisfaction Rate</p>
+                            </div>
+                        </div>
+                        <div class="counter-items wow fadeInUp" data-wow-delay=".8s">
+                            <div class="icon">
+                                <i class="flaticon-instructor"></i>
+                            </div>
+                            <div class="content">
+                                <h2><span class="odometer" data-count="250">00</span>+</h2>
+                                <p>Instructors</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+
+            <!-- <div class="container">
+                <div class="section-title text-center">
+                    <h6 class="text-white wow fadeInUp">
+                        Students Reviews
+                    </h6>
+                    <h2 class="text-white wow fadeInUp" data-wow-delay=".3s">
+                        258+ Students Say About <br>
+                        Our University
+                    </h2>
+                </div>
+                <div class="swiper testimonial-slider-3">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="testimonial-card-items">
+                                <div class="client-info">
+                                    <h3>Richard C. Andre</h3>
+                                    <span>UX/UI Designer</span>
+                                </div>
+                                <img src="assets/img/testimonial/client-1.png" alt="client-1" class="client-img">
+                                <p>
+                                    "The course content was and easy to follow instructors were
+                                    available answer questions "
+                                </p>
+                                <div class="icon">
+                                    <i class="flaticon-double-quotes"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-card-items">
+                                <div class="client-info">
+                                    <h3>Kenneth D. Warren</h3>
+                                    <span>Web Developer</span>
+                                </div>
+                                <img src="assets/img/testimonial/client-2.png" alt="client-2" class="client-img">
+                                <p>
+                                    "The course content was and easy to follow instructors were
+                                    available answer questions "
+                                </p>
+                                <div class="icon">
+                                    <i class="flaticon-double-quotes"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-card-items">
+                                <div class="client-info">
+                                    <h3>Michael P. Comer</h3>
+                                    <span>Graphics Designer</span>
+                                </div>
+                                <img src="assets/img/testimonial/client-3.png" alt="client-3" class="client-img">
+                                <p>
+                                    "The course content was and easy to follow instructors were
+                                    available answer questions "
+                                </p>
+                                <div class="icon">
+                                    <i class="flaticon-double-quotes"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-card-items">
+                                <div class="client-info">
+                                    <h3>Kenneth D. Warren</h3>
+                                    <span>Web Developer</span>
+                                </div>
+                                <img src="assets/img/testimonial/client-2.png" alt="client-2" class="client-img">
+                                <p>
+                                    "The course content was and easy to follow instructors were
+                                    available answer questions "
+                                </p>
+                                <div class="icon">
+                                    <i class="flaticon-double-quotes"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-dot white-color text-center mt-5">
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            </div> -->
+        <!-- </section> -->
+
+       
+
+        <!-- Global Partners Section Start -->
+        <section class="global-partners-section fix section-padding">
+            <div class="container">
+                <div class="section-title color-red text-center">
+                    <h2 class="wow fadeInUp">
+                        Our Proud and Achievements
+                    </h2>
+                </div>
+                <div class="global-partner-wrapper " style="background-color: var(--bg5);">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-12 col-md-12">
+                            <div class="global-partner-items mb-3 mt-4">
+
+                                <div class="row ">
+                                    <div class="col-lg-3 col-md-6 col-sm-6 col-6 col-6 wow fadeInUp" data-wow-delay=".3s">
+                                        <div class="global-logo certificate-item" data-src="assets/img/global/proud1.jpg">
+                                            <img src="assets/img/global/proud1.jpg" alt="img" class="cert-img">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-sm-6 col-6 col-6 wow fadeInUp" data-wow-delay=".5s">
+                                        <div class="global-logo certificate-item" data-src="assets/img/global/proud2.jpg">
+                                            <img src="assets/img/global/proud2.jpg" alt="img" class="cert-img">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-sm-6 col-6 col-6 wow fadeInUp" data-wow-delay=".7s">
+                                        <div class="global-logo certificate-item" data-src="assets/img/global/proud3.jpg">
+                                            <img src="assets/img/global/proud3.jpg" alt="img" class="cert-img">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-sm-6 col-6 col-6 wow fadeInUp" data-wow-delay=".3s">
+                                        <div class="global-logo border-right-none certificate-item" data-src="assets/img/global/proud4.jpg">
+                                            <img src="assets/img/global/proud4.jpg" alt="img" class="cert-img">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-sm-6 col-6 col-6 wow fadeInUp" data-wow-delay=".5s">
+                                        <div class="global-logo border-bottom-none certificate-item" data-src="assets/img/global/proud5.jpg">
+                                            <img src="assets/img/global/proud5.jpg" alt="img" class="cert-img">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-sm-6 col-6 col-6 wow fadeInUp" data-wow-delay=".7s">
+                                        <div class="global-logo border-bottom-none certificate-item" data-src="assets/img/global/proud6.jpg">
+                                            <img src="assets/img/global/proud6.jpg" alt="img" class="cert-img">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-sm-6 col-6 col-6 wow fadeInUp" data-wow-delay=".5s">
+                                        <div class="global-logo border-bottom-none certificate-item" data-src="assets/img/global/proud7.jpg">
+                                            <img src="assets/img/global/proud7.jpg" alt="img" class="cert-img">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-sm-6 col-6 col-6 wow fadeInUp" data-wow-delay=".7s">
+                                        <div class="global-logo border-bottom-none border-right-none certificate-item" data-src="assets/img/global/proud8.jpg">
+                                            <img src="assets/img/global/proud8.jpg" alt="img" class="cert-img">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Certificate Zoom Modal -->
+                            <div id="certificateModal" class="certificate-modal">
+                                <div class="certificate-modal-content">
+                                    <span class="certificate-close">&times;</span>
+                                    <img id="modalImage" src="" alt="Certificate">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section Start -->
+        <!-- <section class="news-section fix section-padding pt-0">
+            <div class="container">
+                <div class="section-title color-red text-center">
+                    <h6 class="wow fadeInUp">
+                        News & Blog
+                    </h6>
+                    <h2 class="wow fadeInUp" data-wow-delay=".3s">
+                        Latest News & Blog
+                    </h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="news-left-items">
+                            <div class="news-thumb">
+                                <img src="assets/img/news/08.jpg" alt="img">
+                                <a href="news-details.html" class="post-box">
+                                    History
+                                </a>
+                            </div>
+                            <div class="news-content">
+                                <ul class="post-cat">
+                                    <li>
+                                        <i class="fal fa-user"></i>
+                                        William R.
+                                    </li>
+                                    <li>
+                                        <i class="fal fa-calendar-alt"></i>
+                                        20 Sep 2024
+                                    </li>
+                                </ul>
+                                <h3>
+                                    <a href="news-details.html">Balancing to Academics the Campus Student's Success Stories from Our Graduates</a>
+                                </h3>
+                                <a href="news-details.html" class="link-btn">Read More <i class="far fa-chevron-double-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="news-right-items">
+                            <div class="news-right-box wow fadeInUp" data-wow-delay=".3s">
+                                <div class="thumb">
+                                    <img src="assets/img/news/09.jpg" alt="img">
+                                    <a href="news-details.html" class="post-box">
+                                        Business
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <ul class="post-cat">
+                                        <li>
+                                            <i class="fal fa-user"></i>
+                                            Holbrook
+                                        </li>
+                                        <li>
+                                            <i class="fal fa-calendar-alt"></i>
+                                            20 Sep 2024
+                                        </li>
+                                    </ul>
+                                    <h5>
+                                        <a href="news-details.html">Power Lifelong the Learning
+                                            Education Never Stops</a>
+                                    </h5>
+                                    <a href="news-details.html" class="link-btn">Read More <i class="far fa-chevron-double-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="news-right-box wow fadeInUp" data-wow-delay=".5s">
+                                <div class="thumb">
+                                    <img src="assets/img/news/10.jpg" alt="img">
+                                    <a href="news-details.html" class="post-box">
+                                        Community
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <ul class="post-cat">
+                                        <li>
+                                            <i class="fal fa-user"></i>
+                                            Nathan C.
+                                        </li>
+                                        <li>
+                                            <i class="fal fa-calendar-alt"></i>
+                                            20 Sep 2024
+                                        </li>
+                                    </ul>
+                                    <h5>
+                                        <a href="news-details.html">Navigating Your to College Journey Tips for New</a>
+                                    </h5>
+                                    <a href="news-details.html" class="link-btn">Read More <i class="far fa-chevron-double-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="news-right-box wow fadeInUp" data-wow-delay=".3s">
+                                <div class="thumb">
+                                    <img src="assets/img/news/09.jpg" alt="img">
+                                    <a href="news-details.html" class="post-box">
+                                        Finance
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <ul class="post-cat">
+                                        <li>
+                                            <i class="fal fa-user"></i>
+                                            Ryan S.
+                                        </li>
+                                        <li>
+                                            <i class="fal fa-calendar-alt"></i>
+                                            20 Sep 2024
+                                        </li>
+                                    </ul>
+                                    <h5>
+                                        <a href="news-details.html">Balancing to Academics the
+                                            Campus Student's Guide</a>
+                                    </h5>
+                                    <a href="news-details.html" class="link-btn">Read More <i class="far fa-chevron-double-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+         <!-- Instagram Section Start -->
+          
+        <!-- <div class="instagram-section fix">
+            <div class="swiper instagram-slider">
+                <div class="swiper-wrapper">
+
+   Christmas Ceremony -->
+  <!-- <div class="swiper-slide">
+    <img src="assets/img/events/christmas-ceremony.jpg" alt="Christmas Ceremony">
+    <p>Christmas Traditions & Cake Mixing Ceremony (05 Dec 2025)</p>
+  </div> -->
+
+  <!-- Fashion Show -->
+  <!-- <div class="swiper-slide">
+    <img src="assets/img/events/navyakriti-fashion.jpg" alt="Navyakriti 2025">
+    <p>Inter-College Fashion Show – Navyakriti 2025</p>
+  </div> -->
+
+  <!-- Cricket Tournament -->
+  <!-- <div class="swiper-slide">
+    <img src="assets/img/events/cricket-tournament.jpg" alt="Cricket Tournament">
+    <p>PTIS Inter-College Cricket Tournament</p>
+  </div> -->
+  
+  <!-- Mobility Awareness -->
+  <!-- <div class="swiper-slide">
+    <img src="assets/img/events/mobility-awareness.jpg" alt="Mobility Awareness">
+    <p>Safe & Legal Mobility Awareness Programme</p>
+  </div> -->
+
+  <!-- Drones Bootcamp -->
+  <!-- <div class="swiper-slide">
+    <img src="assets/img/events/drones-bootcamp.jpg" alt="Drones Bootcamp">
+    <p>Nextgen Drones Bootcamp (with NIT Jalandhar)</p>
+  </div> -->
+
+  <!-- ByteVerse -->
+  <!-- <div class="swiper-slide">
+    <img src="assets/img/events/byteverse-hackathon.jpg" alt="ByteVerse Hackathon">
+    <p>ByteVerse 1.0 – National Hackathon</p>
+  </div> -->
+
+  <!-- Hindi Play -->
+  <!-- <div class="swiper-slide">
+    <img src="assets/img/events/hindi-play.jpg" alt="Hindi Play">
+    <p>Hindi Play: “Terrorist Ki Premika”</p>
+  </div> -->
+
+  <!-- Youth Festival -->
+  <!-- <div class="swiper-slide">
+    <img src="assets/img/events/youth-festival.jpg" alt="Youth Festival">
+    <p>IKG PTU Youth Festival North Zone</p>
+  </div> -->
+
+  <!-- CTIEMT Winner -->
+  <!-- <div class="swiper-slide">
+    <img src="assets/img/events/youth-festival-winner.jpg" alt="Youth Festival Winner">
+    <p>CTIEMT Wins at Youth Festival</p>
+  </div>
+
+</div> -->
+
+                <!-- <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="instagram-image">
+                            <img src="assets/img/instagram/01.jpg" alt="img">
+                            <a href="courses-details.html" class="icon"><i class="far fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="instagram-image">
+                            <img src="assets/img/instagram/02.jpg" alt="img">
+                            <a href="courses-details.html" class="icon"><i class="far fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="instagram-image">
+                            <img src="assets/img/instagram/03.jpg" alt="img">
+                            <a href="courses-details.html" class="icon"><i class="far fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="instagram-image">
+                            <img src="assets/img/instagram/04.jpg" alt="img">
+                            <a href="courses-details.html" class="icon"><i class="far fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="instagram-image">
+                            <img src="assets/img/instagram/05.jpg" alt="img">
+                            <a href="courses-details.html" class="icon"><i class="far fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div> -->
+            <!-- </div> -->
+        <!-- </div>  -->
+
+       
+<!-- Life at CT Section -->
+<!-- <section class="life-at-ct-section section-padding">
+  <div class="container"> -->
+
+    
+         <!-- Choose Us Section Start -->
+         <section class="choose-us-section-3 fix section-padding pt-0">
+           <div class="choose-us-wrapper-3">
+                <div class="row g-0">
+                    <div class="col-xxl-7 col-xl-6 col-lg-6">
+                        <div class="video-image campus-img wow img-custom-anim-left">
+                            <img src="assets/img/ctgroup.JPG" alt="CTGI Shahpur Campus">
+                            <div class="img-overlay"></div>
+                        </div>
+
+                            <!-- <a href="https://www.youtube.com/watch?v=Cn4G2lZ_g2I" class="video-btn ripple video-popup">
+                                <i class="fas fa-play"></i>
+                            </a> -->
+                        <!-- </div> -->
+                    </div>
+                    <div class="col-xxl-5 col-xl-6 col-lg-6 choose-content campus-panel  " >
+                   
+
+                        <div class="section-title">
+                        
+                            <h6 class="text-white wow fadeInUp">
+                                CT Group
+                            </h6>
+                            <h2 class="text-white wow fadeInUp" data-wow-delay=".3s">
+                                CTGI, Shahpur Campus - Built for Your Future
+                            </h2>
+                        </div>
+
+                        <!-- <p class="mt-3 mt-md-0 text-white wow fadeInUp" data-wow-delay=".5s">
+                            CTGI – Shahpur Campus offers a student-centric learning environment with modern infrastructure,
+                            experienced faculty, and industry-focused programs designed to shape future-ready professionals.
+                        </p> -->
+
+                        <div class="campus-points">
+
+                    <div class="point-item">
+                        <span class="tick-icon">
+                            <i class="fas fa-check"></i>
+                        </span>
+                        <div class="point-text">
+                            <h4>Focused Academic Culture</h4>
+                            <p>
+                                CTGI – Shahpur Campus follows a disciplined academic structure with
+                                regular classes, evaluations, and mentoring to keep students
+                                consistent and career-focused.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="point-item">
+                        <span class="tick-icon">
+                            <i class="fas fa-check"></i>
+                        </span>
+                        <div class="point-text">
+                            <h4>Well-Planned Infrastructure</h4>
+                            <p>
+                                The campus is equipped with modern classrooms, laboratories, library,
+                                and learning spaces designed to support practical and theoretical education.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="point-item">
+                        <span class="tick-icon">
+                            <i class="fas fa-check"></i>
+                        </span>
+                        <div class="point-text">
+                            <h4>Experienced & Supportive Faculty</h4>
+                            <p>
+                                Faculty members focus on concept clarity, student guidance, and
+                                continuous academic support throughout the program.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="point-item">
+                        <span class="tick-icon">
+                            <i class="fas fa-check"></i>
+                        </span>
+                        <div class="point-text">
+                            <h4>Safe & Student-Friendly Campus</h4>
+                            <p>
+                                A secure campus environment with proper facilities ensures a comfortable
+                                and supportive atmosphere for students.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                       
+                    </div>
+                </div>
+
+                </div>
+           </div>
+        </section> 
+
+       
+
+        <!-- Testimonial Section Start -->
+        <section class="testimonial-section-3 fix pt-4 section-padding bg-cover"
+            style="background-image: url('assets/img/testimonial/.jpg');">
+
+            <div class="container py-5">
+
+                <!-- Section Title -->
+                <div class="section-title section-heading text-center mb-5">
+                <h6 class=" student-review ">Students Reviews</h6>
+                <h2 class=" voice">
+                    Voice Of Our Students
+                </h2>
+                </div>
+
+                <!-- CUSTOM SLIDER -->
+                <div class="slider-container">
+                <div class="slider">
+                    <!-- Cards injected by JS -->
+                </div>
+                </div>
+
+                <!-- PROGRESS DOTS -->
+                <div class="progress-indicators d-flex justify-content-center mt-4">
+                <!-- Injected by JS -->
+                </div>
+
+            </div>
+        </section>
+        
+        <!-- Faq Section Start -->
+       <section class="faq-section fix section-padding pt-0">
+       <div class="container">
+        <div class="faq-wrapper style-2">
+            <div class="row g-4 align-items-center">
+                
+                <!-- FAQ CONTENT -->
+                <div class="col-lg-6">
+                    <div class="faq-content">
+                        <div class="section-title color-red">
+                    
+
+                            <h6 class="wow fadeInUp">Asked Questions</h6>
+                            <h2 class="wow fadeInUp" data-wow-delay=".3s">
+                                Frequently Asked Questions
+                            </h2>
+                            <!-- <p>Find answers to common questions related to admissions at CTGI – Shahpur Campus.</p> -->
+                            
+                        </div>
+
+                        <div class="faq-items mt-4 mt-md-0 mb-0">
+                            <div class="accordion" id="accordionExample">
+
+                                <!-- FAQ 1 -->
+                                <div class="accordion-item wow fadeInUp" data-wow-delay=".2s">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne"
+                                            aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            What programs does CT Group offer?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        aria-labelledby="headingOne"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p>
+                                                CT Group offers a wide range of undergraduate, postgraduate, 
+                                                and diploma programs in Engineering, Management, Computer Science, 
+                                                Law, Pharmacy, and Commerce.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- FAQ 2 -->
+                                <div class="accordion-item wow fadeInUp" data-wow-delay=".4s">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTwo"
+                                            aria-expanded="false"
+                                            aria-controls="collapseTwo">
+                                            How can I apply to CT Group?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p>
+                                                You can apply through the official CT Group website using the 
+                                                online application portal. Upload required academic documents 
+                                                and recent photographs during the application process.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- FAQ 3 -->
+                                <div class="accordion-item wow fadeInUp" data-wow-delay=".6s">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseThree"
+                                            aria-expanded="false"
+                                            aria-controls="collapseThree">
+                                            What are the eligibility criteria for admission?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p>
+                                                Eligibility criteria vary by course. Generally, students must 
+                                                meet the minimum academic percentage required in their previous 
+                                                qualification. Detailed criteria are available on each program page.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- FAQ 4 -->
+                                <div class="accordion-item wow fadeInUp" data-wow-delay=".8s">
+                                    <h2 class="accordion-header" id="headingFour">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseFour"
+                                            aria-expanded="false"
+                                            aria-controls="collapseFour">
+                                            Are there any scholarships available?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFour" class="accordion-collapse collapse"
+                                        aria-labelledby="headingFour"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p>
+                                                Yes, CT Group provides scholarships based on academic merit, 
+                                                financial need, and other eligibility criteria. Students can 
+                                                find detailed information on the scholarship section of the website.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- FAQ 5 -->
+                                <div class="accordion-item wow fadeInUp" data-wow-delay="1s">
+                                    <h2 class="accordion-header" id="headingFive">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseFive"
+                                            aria-expanded="false"
+                                            aria-controls="collapseFive">
+                                            What hostel facilities are available at CT Group?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFive" class="accordion-collapse collapse"
+                                        aria-labelledby="headingFive"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p>
+                                                CT Group offers separate hostels for boys and girls with 
+                                                Wi-Fi, 24/7 power backup, water supply, security, and 
+                                                recreational facilities.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- FAQ 6 -->
+                                <div class="accordion-item mb-0 wow fadeInUp" data-wow-delay="1.2s">
+                                    <h2 class="accordion-header" id="headingSix">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseSix"
+                                            aria-expanded="false"
+                                            aria-controls="collapseSix">
+                                            How is the placement assistance at CT Group?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseSix" class="accordion-collapse collapse"
+                                        aria-labelledby="headingSix"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p>
+                                                CT Group has a dedicated placement cell that collaborates with 
+                                                top companies to provide excellent job opportunities. Students 
+                                                are placed in reputed national and international organizations.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IMAGE SECTION -->
+                <div class="col-lg-6 ">
+                    <div class="faq-image-2">
+                        <img src="assets/img/faq/faq1.png" alt="img" class="wow img-custom-anim-left">
+                        <div class="bg-shape">
+                            <img src="assets/img/faq/bg-shape.png" alt="img">
+                        </div>
+                        <!-- <div class="quote-shape float-bob-x">
+                            <img src="assets/img/faq/faq.png" alt="img" style="width: 50px; height: 50px;">
+                        </div> -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+ <section class="virtual-tour-section py-5">
+            <div class="container" style="max-width:95%;">
+                
+                <!-- Heading -->
+                <div class="chairman-header text-center mb-4">
+                    <h2 class="virtual-title">
+                        Step Inside CT Group, Shahpur – Virtually
+                    </h2>
+                    <p class="chairman-subtitle">
+                        Explore our dynamic campus from anywhere in the world with our immersive Virtual Tour. 
+                        Discover your gateway to quality education, modern infrastructure, and a vibrant student community —
+                        all from the comfort of your home.
+                    </p>
+                </div>
+
+                <!-- Virtual Tour Embed -->
+                <div class="virtual-tour-wrapper">
+                    <iframe 
+                        src="https://ctsouthcampus.s3.ap-south-1.amazonaws.com/index.html"
+                        title="CT Group Shahpur Virtual Tour"
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
+                </div>
+
+            </div>
+        </section>
+
+
+       
+
+        <!-- Quality Courses Section Start -->
+        <!-- <section class="quality-coureses-section section-padding fix theme-red-bg">
+            <div class="container-fluid">
+                <div class="row g-4">
+                    <div class="col-xl-2 col-lg-6">
+                        <div class="coureses-image float-bob-x">
+                            <img src="assets/img/courses/girl.png" alt="img" class="wow img-custom-anim-left" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                            <div class="bg-shape">
+                                <img src="assets/img/courses/bg-shape.png" alt="img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-6">
+                        <div class="quality-coureses-content text-center">
+                            <div class="section-title">
+                                <h6 class="text-white wow fadeInUp">
+                                    Quality Courses & Program
+                                </h6>
+                                <h2 class="text-white wow fadeInUp" data-wow-delay=".3s">
+                                    Get Your Quality Skills Certificate  Through Eduspace
+                                </h2>
+                            </div>
+                            <p class="mt-3 mt-md-0 wow fadeInUp" data-wow-delay=".3s">We Provide 2800+ Best Quality Courses From Eduspace</p>
+                            <a href="courses-details.html" class="theme-btn wow fadeInUp" data-wow-delay=".3s">
+                                Get Started Now
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6">
+                        <div class="coureses-image style-2 float-bob-y">
+                            <img src="assets/img/courses/boy.png" alt="img" class="wow img-custom-anim-right" data-wow-duration="1.5s" data-wow-delay="0.4s">
+                            <div class="bg-shape">
+                                <img src="assets/img/courses/bg-shape-2.png" alt="img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Marquee Section Start -->
+        <!-- <div class="marquee-section section-padding border-bottom">
+            <div class="mycustom-marque style-3">
+                <div class="scrolling-wrap">
+                    <div class="comm">
+                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> University</div>
+                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> Online Courses</div>
+                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> Learning Platforms</div>
+                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> Live Courses</div>
+                    </div>
+                    <div class="comm">
+                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> University</div>
+                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> Online Courses</div>
+                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> Learning Platforms</div>
+                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> Live Courses</div>
+                    </div>
+                    <div class="comm">
+                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> University</div>
+                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> Online Courses</div>
+                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> Learning Platforms</div>
+                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> Live Courses</div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Footer Section Start -->
+        <footer class="footer-section-3 fix">
+            <div class="circle-shape">
+                <img src="assets/img/footer/circle.png" alt="img">
+            </div>
+            <div class="vector-shape">
+                <img src="assets/img/footer/Vector.png" alt="img">
+            </div>
+            <!-- <div class="container">
+                <div class="footer-widget-wrapper style-2">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                            <div class="single-footer-widget">
+                                <div class="widget-head">
+                                    <a href="index.html">
+                                        <img src="assets/img/logo/black-logo-3.svg" alt="img">
+                                    </a>
+                                </div>
+                                <div class="footer-content">
+                                    <p>
+                                        Education the foundation personal and societal growth, empowering individuals with knowledge.
+                                    </p>
+                                    <div class="social-icon">
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                                        <a href="#"><i class="fab fa-behance"></i></a>
+                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 ps-lg-5 wow fadeInUp" data-wow-delay=".4s">
+                            <div class="single-footer-widget">
+                                <div class="widget-head">
+                                   <h3>Online Platform</h3>
+                                </div>
+                                <ul class="list-area">
+                                    <li><a href="courses.html">Coursera</a></li>
+                                    <li><a href="courses.html">MasterClass</a></li>
+                                    <li><a href="courses.html">Skillshare</a></li>
+                                    <li><a href="courses.html">LinkedIn Learning</a></li>
+                                    <li><a href="courses.html">FutureLearn</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".8s">
+                            <div class="single-footer-widget style-left">
+                                <div class="widget-head">
+                                   <h3>Contact Us</h3>
+                                </div>
+                                <div class="footer-content">
+                                    <ul class="contact-info">
+                                        <li>
+                                            55 Main Street, 2nd block
+                                            Malborne, Australia
+                                        </li>
+                                        <li>
+                                            <a href="mailto:info@example.com" class="link">info@example.com</a>
+                                        </li>
+                                        <li>
+                                            <a href="tel:+0001238899">+000 (123) 88 99</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 ps-xl-5 wow fadeInUp" data-wow-delay=".8s">
+                            <div class="single-footer-widget">
+                                <div class="widget-head">
+                                   <h3>Newsletter</h3>
+                                </div>
+                                <div class="footer-content">
+                                    <p>Get the latest news delivered to you inbox</p>
+                                    <div class="footer-input">
+                                        <div class="icon">
+                                            <i class="far fa-envelope"></i>
+                                        </div>
+                                        <input type="email" id="email2" placeholder="Email Address">
+                                        <button class="newsletter-btn" type="submit">
+                                            Subscribe
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div class="footer-bottom style-3 " style=" background-color: var(--theme-red); ">
+                <div class="container">
+                    <div class="footer-bottom-wrapper ">
+                        <p style="text-align: center; color: #fff; font-weight: 600;">Copyright © <a href="">CT Group 2026</a>, all rights reserved.</p>
+                        <!-- <ul class="footer-menu wow fadeInUp" data-wow-delay=".5s">
+                            <li>
+                                <a href="courses.html">
+                                    University 
+                                </a>
+                            </li>
+                            <li>
+                                <a href="faq.html">
+                                    FAQs 
+                                </a>
+                            </li>
+                            <li>
+                                <a href="contact.html">
+                                    Privacy Policy
+                                </a>
+                            </li>
+                            <li>
+                                <a href="event.html">
+                                    Events
+                                </a>
+                            </li>
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="assets/js/jquery-3.7.1.min.js"></script>
+
+        <!-- Bootstrap -->
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Core Plugins -->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+
+        <!-- jQuery Plugins -->
+        <script src="assets/js/jquery.appear.min.js"></script>
+        <script src="assets/js/odometer.min.js"></script>
+        <script src="assets/js/jquery.nice-select.min.js"></script>
+        <script src="assets/js/jquery.meanmenu.min.js"></script>
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="assets/js/circle-progress.js"></script>
+
+        <!-- Main -->
+        <script src="assets/js/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+                
+
+
+    </body>
+</html>
