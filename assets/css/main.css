@@ -8531,7 +8531,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 220px;
+  /* min-height: 220px; */
   
 }
 .global-logo img {
@@ -8562,7 +8562,7 @@ p {
 }
 @media (max-width: 575px) {
   .global-partner-wrapper .global-partner-items .global-logo {
-    padding: 20px;
+    /* padding: 20px; */
   }
 }
 .global-partner-wrapper .global-partner-items .global-logo.border-right-none {
