@@ -22,23 +22,37 @@
         const hamburger = document.querySelector('.header__hamburger');
         const sidebarToggle = document.querySelector('.sidebar__toggle');
 
-        // Handle hamburger click
+        // Handle hamburger click (toggle)
         if (hamburger) {
             hamburger.addEventListener('click', function(e) {
                 e.stopPropagation();
-                mobileSidebar.classList.add('active');
-                mobileSidebarOverlay.classList.add('active');
-                document.body.style.overflow = 'hidden';
+                const isActive = mobileSidebar.classList.contains('active');
+                if (isActive) {
+                    mobileSidebar.classList.remove('active');
+                    mobileSidebarOverlay.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                } else {
+                    mobileSidebar.classList.add('active');
+                    mobileSidebarOverlay.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
             });
         }
 
-        // Handle sidebar toggle click
+        // Handle sidebar toggle click (toggle)
         if (sidebarToggle) {
             sidebarToggle.addEventListener('click', function(e) {
                 e.stopPropagation();
-                mobileSidebar.classList.add('active');
-                mobileSidebarOverlay.classList.add('active');
-                document.body.style.overflow = 'hidden';
+                const isActive = mobileSidebar.classList.contains('active');
+                if (isActive) {
+                    mobileSidebar.classList.remove('active');
+                    mobileSidebarOverlay.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                } else {
+                    mobileSidebar.classList.add('active');
+                    mobileSidebarOverlay.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
             });
         }
 
@@ -131,8 +145,8 @@
             $(".offcanvas__overlay").removeClass("overlay-open");
         });
         $(".sidebar__toggle").on("click", function() {
-            $(".offcanvas__info").addClass("info-open");
-            $(".offcanvas__overlay").addClass("overlay-open");
+            $(".offcanvas__info").toggleClass("info-open");
+            $(".offcanvas__overlay").toggleClass("overlay-open");
         });
 
         //>> Body Overlay Js Start <<//
@@ -658,15 +672,33 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
 
-        // Close mega menu when clicking outside
+        // Close courses mega menu when clicking outside or pressing Escape
         document.addEventListener('click', function(event) {
             const coursesMegaMenu = document.getElementById('coursesMegaMenu');
-            const coursesMenuWrapper = document.querySelector('.courses-menu-wrapper');
-            
-            if (coursesMegaMenu && coursesMenuWrapper && !coursesMenuWrapper.contains(event.target)) {
+            const coursesToggleBtn = document.getElementById('coursesToggleBtn');
+            if (!coursesMegaMenu) return;
+
+            // Only act when menu is open
+            if (coursesMegaMenu.classList.contains('active')) {
+                // If click was inside the menu or on the toggle button, do nothing
+                if (coursesMegaMenu.contains(event.target) || (coursesToggleBtn && coursesToggleBtn.contains(event.target))) {
+                    return;
+                }
+
+                // Otherwise close the menu
                 coursesMegaMenu.classList.remove('active');
-                // clear inline styles that were forcing width/display
                 coursesMegaMenu.style.cssText = '';
+            }
+        });
+
+        // Close with Escape key when open
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                const coursesMegaMenu = document.getElementById('coursesMegaMenu');
+                if (coursesMegaMenu && coursesMegaMenu.classList.contains('active')) {
+                    coursesMegaMenu.classList.remove('active');
+                    coursesMegaMenu.style.cssText = '';
+                }
             }
         });
         // Set default visible category function
@@ -701,6 +733,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
+        
        (() => {
   const collage = document.querySelector('.collage');
   const lightbox = document.getElementById('imageLightbox');
