@@ -57,6 +57,49 @@
             text-decoration: none;
             outline: none;
         }
+        /* Header logos: unified sizing (prevents stretching) */
+        .header-logo img.main-logo,
+        .header-logo img.naac-logo {
+            height: auto !important;
+            width: auto !important;
+            max-height: 60px !important;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .header-logo img.main-logo { max-height: 50px !important; }
+        .header-logo img.naac-logo { max-height: 40px !important; margin-left: 12px !important; }
+
+        /* Breakpoint: <=1199px */
+        @media (max-width: 1199px) {
+            .header-logo img.main-logo { max-height: 50px !important; }
+            .header-logo img.naac-logo { max-height: 40px !important; }
+        }
+
+        /* Breakpoint: <=999px */
+        @media (max-width: 999px) {
+            .header-logo img.main-logo { max-height: 48px !important; }
+            .header-logo img.naac-logo { max-height: 40px !important; }
+        }
+
+        /* Breakpoint: <=768px (tablet) */
+        @media (max-width: 768px) {
+            .header-logo img.main-logo { max-height: 44px !important; }
+            .header-logo img.naac-logo { max-height: 38px !important; margin-left: 8px !important; }
+        }
+
+        /* Mobile */
+        @media (max-width: 575px) {
+            .header-logo img.main-logo { max-height: 40px !important; }
+            .header-logo img.naac-logo { max-height: 35px !important; width: 80px !important; margin-left: 6px !important; }
+            .toll-free { font-size: 12px; }
+        }
+
+        /* Very small phones */
+        @media (max-width: 420px) {
+            .header-logo img.main-logo { max-height: 36px !important; }
+            .header-logo img.naac-logo { max-height: 30px !important;  margin-left: 6px !important; }
+            .toll-free { font-size: 11px; }
+        }
         </style>
     </head>
 
@@ -265,65 +308,6 @@
             </div>
         </div>
 
-        <!-- Offcanvas Area Start -->
-        <!-- <div class="fix-area">
-            <div class="offcanvas__info">
-                <div class="offcanvas__wrapper">
-                    <div class="offcanvas__content">
-                        <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
-                            <div class="offcanvas__logo">
-                                <a href="index.html">
-                                    <img src="assets/img/logo/black-logo.svg" alt="logo-img">
-                                </a>
-                            </div>
-                            <div class="offcanvas__close">
-                                <button type="button" title="Close menu" aria-label="Close menu">
-                                <i class="fas fa-times"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <h3 class="offcanvas-title">Hello There!</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit, </p>
-                        <div class="social-icon d-flex align-items-center">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-youtube"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                        <div class="mobile-menu fix mb-3"></div>
-                        <div class="offcanvas__contact">
-                            <h3>Information</h3>
-                            <ul class="contact-list">
-                                <li>
-                                    <span>
-                                        Address:
-                                    </span>
-                                    7300-7398 Colonial Rd,
-                                    Brooklyn, NY 11209
-                                </li>
-                                <li>
-                                    <span>
-                                        Call Us:
-                                    </span>
-                                    <a href="tel:+00012345688">+000 123 456 88</a>
-                                </li>
-                                <li>
-                                    <span>
-                                        Email:
-                                    </span>
-                                    <a href="mailto:supportedus@gmail.com">supportedus@gmail.com</a>
-                                </li>
-                            </ul>
-                            <div class="offcanvas-button">
-                                <a href="sign-in.html" class="theme-btn style-2"><i class="far fa-user"></i> Admin</a>
-                                <a href="register.html" class="theme-btn yellow-btn">Enroll Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="offcanvas__overlay"></div> -->
 
         <!-- Header Section Start -->
    <header class="header-section-3" style="background-color: var(--theme-red);">
@@ -333,8 +317,8 @@
                     
                     <!-- Logo on the left -->
                     <a href="index.html" class="header-logo d-flex align-items-center">
-                        <img src="assets/img/header/nav_logo1.webp" alt="logo-img" style="height: 50px; width: auto; ">
-                        <img src="assets/img/header/nav_logo2.png" alt="logo-img" style="height: 60px; width: 60px; ">
+                        <img src="assets/img/header/nav_logo1.webp" alt="logo-img" class="main-logo" style="width: auto;">
+                        <img src="assets/img/header/naac a_1.png" alt="logo-img" class="naac-logo" style="width: auto; margin-left:15px;">
                         <!-- <img src="assets/img/header/nav_logo3.png" alt="logo-img" style="height: 70px; width: 70px;"> -->
 
                     </a>
@@ -346,10 +330,18 @@
                         <!-- Courses Offered Button -->
 
                         <div class="courses-menu-wrapper">
-                            <a href="javascript:void(0)" class="theme-btn" onclick="toggleCoursesMegaMenu()">
+                            <!-- <a href="javascript:void(0)" class="theme-btn" onclick="toggleCoursesMegaMenu()">
                                 Courses Offered
-                            </a>
+                            </a> -->
                             
+                        <a href="javascript:void(0)"
+                        id="coursesToggleBtn"
+                        class="theme-btn"
+                        onclick="toggleCoursesMegaMenu(event)">
+                         Courses Offered
+                        </a>
+
+
 
                             <!-- Courses Mega Menu -->
                             <div class="courses-mega-menu" id="coursesMegaMenu">
@@ -866,7 +858,7 @@
             <div class="swiper hero-slider">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="slider-bg bg-cover" style="background-image: url('assets/img/banner1.jpeg');">
+                        <div class="slider-bg bg-cover" style="background-image: url('assets/img/ctgroup.JPG');">
                             <div class="overlay-bg bg-cover" ></div>
                         </div>
                         <div class="container">
@@ -1044,8 +1036,8 @@
                             <h6 class="text-white wow fadeInUp" style="font-weight: 10px;">
                                 Established in 1997
                             </h6><br>
-                            <span class="ctgi wow fadeInUp" style="font-size:40px; font-weight: 800;" data-wow-delay=".3s">
-                                Why study at Shahpur Campus?
+                            <span class="ctgi wow fadeInUp" style="font-size:45px; font-weight: 800; " data-wow-delay=".3s">
+                                Why study at CT Shahpur Campus?
                             </span>
                         </div>
 
@@ -1086,12 +1078,12 @@
 
                         <div class="about-counter-items">
                             <div class="counter-content wow fadeInUp" data-wow-delay=".3s">
-                                <h3><span class="odometer" data-count="28">00</span>+</h3>
+                                <h3><span class="odometer" data-count="25">00</span>+</h3>
                                 <p>Years of Academic Legacy</p>
                             </div>
                             <div class="counter-content wow fadeInUp" data-wow-delay=".5s">
                                 <h3><span class="odometer" data-count="100">00</span>%</h3>
-                                <p>Placement Guidance & Support</p>
+                                <p>Placement Assistance</p>
                             </div>
                         </div>
 

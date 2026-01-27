@@ -635,22 +635,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 menu.classList.remove('wide');
             }
         }
-        // Courses Mega Menu Toggle Function
-        function toggleCoursesMegaMenu() {
-                    const coursesMegaMenu = document.getElementById('coursesMegaMenu');
-                    const isActive = coursesMegaMenu.classList.toggle('active');
-                    // when opening, force correct width immediately (avoid CSS flash)
-                    if (isActive) {
-                        // compute width: 95% of viewport but not more than 1400px
-                        const widthPx = Math.min(1400, Math.floor(window.innerWidth * 0.95));
-                        // use cssText with !important to prevent later stylesheet adjustments
-                        coursesMegaMenu.style.cssText = "width: " + widthPx + "px !important; left: 35% !important; transform: translateX(-50%) !important; display: flex !important; max-height: 900px !important; overflow-y: auto !important;";
-                        try { setCourseCategory('matric'); } catch(e) {}
-                    } else {
-                        // closing: remove inline sizing so CSS controls it later
-                        coursesMegaMenu.style.cssText = '';
-                    }
-        }
+
+
+        // Unified toggle for Courses Mega Menu
+        // Works like mobile category toggle: opens/closes, closes siblings, and manages inline styles.
+
+
 
         // Filter Courses by Category
         function filterCourseCategory(event, category) {
@@ -672,24 +662,53 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
 
-        // Close courses mega menu when clicking outside or pressing Escape
-        document.addEventListener('click', function(event) {
-            const coursesMegaMenu = document.getElementById('coursesMegaMenu');
-            const coursesToggleBtn = document.getElementById('coursesToggleBtn');
-            if (!coursesMegaMenu) return;
+        // (Removed) old outside-click handler — replaced by a single robust listener below
 
-            // Only act when menu is open
-            if (coursesMegaMenu.classList.contains('active')) {
-                // If click was inside the menu or on the toggle button, do nothing
-                if (coursesMegaMenu.contains(event.target) || (coursesToggleBtn && coursesToggleBtn.contains(event.target))) {
-                    return;
+        function toggleCoursesMegaMenu(event) {
+            if (event) event.stopPropagation();
+
+            const wrapper = document.querySelector('.courses-menu-wrapper');
+            const menu = document.getElementById('coursesMegaMenu');
+            const toggleBtn = document.getElementById('coursesToggleBtn');
+            if (!menu || !wrapper) return;
+
+            const isActive = menu.classList.contains('active');
+
+            // Close any other open menus inside the same wrapper
+            wrapper.querySelectorAll('.courses-mega-menu').forEach(m => {
+                if (m !== menu && m.classList.contains('active')) {
+                    m.classList.remove('active');
+                    m.style.cssText = '';
                 }
+            });
 
-                // Otherwise close the menu
-                coursesMegaMenu.classList.remove('active');
-                coursesMegaMenu.style.cssText = '';
+            // Toggle current menu
+            if (isActive) {
+                menu.classList.remove('active');
+                menu.style.cssText = '';
+                if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
+            } else {
+                menu.classList.add('active');
+                const widthPx = Math.min(1400, Math.floor(window.innerWidth * 0.95));
+                menu.style.cssText =
+                    "width:" + widthPx + "px !important;" +
+                    "left:35% !important;" +
+                    "transform:translateX(-50%) !important;" +
+                    "display:flex !important;" +
+                    "max-height:900px !important;" +
+                    "overflow-y:auto !important;";
+                try { setCourseCategory('matric'); } catch (e) {}
+                if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'true');
             }
-        });
+        }
+        
+        const coursesMegaMenu = document.getElementById('coursesMegaMenu');
+            if (coursesMegaMenu) {
+                coursesMegaMenu.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                });
+            }
+
 
         // Close with Escape key when open
         document.addEventListener('keydown', function(event) {
@@ -766,8 +785,8 @@ document.addEventListener('DOMContentLoaded', function () {
 //   });
 
   /* ---------- ESC KEY CLOSE ---------- */
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && lightbox.classList.contains('active')) {
       closeLightbox();
     }
   });
@@ -780,3 +799,21 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 })();
+
+// ===== Close Courses Mega Menu on Outside Click =====
+document.addEventListener('click', function (e) {
+    const menu = document.getElementById('coursesMegaMenu');
+    const toggleBtn = document.getElementById('coursesToggleBtn');
+    if (!menu) return;
+
+    // Only act when menu is open
+    if (!menu.classList.contains('active')) return;
+
+    // If click was inside the menu or on the toggle button, do nothing
+    if (menu.contains(e.target) || (toggleBtn && toggleBtn.contains(e.target))) return;
+
+    // Otherwise close the menu and clear inline styles / aria
+    menu.classList.remove('active');
+    menu.style.cssText = '';
+    if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
+});
