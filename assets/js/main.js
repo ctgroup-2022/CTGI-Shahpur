@@ -681,13 +681,40 @@ document.addEventListener('DOMContentLoaded', function () {
                     m.style.cssText = '';
                 }
             });
+            // Toggle current menu (with overlay to reliably catch outside clicks)
+            const overlayId = 'coursesMenuOverlay';
+            function removeOverlay() {
+                const existing = document.getElementById(overlayId);
+                if (existing) {
+                    existing.removeEventListener('click', overlayClickHandler);
+                    existing.parentNode && existing.parentNode.removeChild(existing);
+                }
+            }
 
-            // Toggle current menu
+            function overlayClickHandler(e) {
+                // If the click target is inside the menu element or within its bounding box, ignore
+                if (!e) e = window.event;
+                if (menu.contains(e.target)) return;
+                const rect = menu.getBoundingClientRect();
+                const x = e.clientX !== undefined ? e.clientX : (e.touches && e.touches[0] && e.touches[0].clientX);
+                const y = e.clientY !== undefined ? e.clientY : (e.touches && e.touches[0] && e.touches[0].clientY);
+                if (x !== undefined && y !== undefined) {
+                    if (x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom) return;
+                }
+
+                menu.classList.remove('active');
+                menu.style.cssText = '';
+                if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
+                removeOverlay();
+            }
+
             if (isActive) {
                 menu.classList.remove('active');
                 menu.style.cssText = '';
                 if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
+                removeOverlay();
             } else {
+                // Open menu and add full-page transparent overlay to capture outside clicks
                 menu.classList.add('active');
                 const widthPx = Math.min(1400, Math.floor(window.innerWidth * 0.95));
                 menu.style.cssText =
@@ -696,7 +723,25 @@ document.addEventListener('DOMContentLoaded', function () {
                     "transform:translateX(-50%) !important;" +
                     "display:flex !important;" +
                     "max-height:900px !important;" +
-                    "overflow-y:auto !important;";
+                    "overflow-y:auto !important;" +
+                    "z-index:1001 !important;";
+
+                // ensure any previous overlay removed
+                removeOverlay();
+
+                const overlay = document.createElement('div');
+                overlay.id = overlayId;
+                overlay.style.position = 'fixed';
+                overlay.style.top = '0';
+                overlay.style.left = '0';
+                overlay.style.width = '100%';
+                overlay.style.height = '100%';
+                overlay.style.background = 'transparent';
+                overlay.style.zIndex = '1000';
+                overlay.style.cursor = 'default';
+                overlay.addEventListener('click', overlayClickHandler);
+                document.body.appendChild(overlay);
+
                 try { setCourseCategory('matric'); } catch (e) {}
                 if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'true');
             }
@@ -717,6 +762,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (coursesMegaMenu && coursesMegaMenu.classList.contains('active')) {
                     coursesMegaMenu.classList.remove('active');
                     coursesMegaMenu.style.cssText = '';
+                    const existing = document.getElementById('coursesMenuOverlay');
+                    if (existing) existing.parentNode && existing.parentNode.removeChild(existing);
                 }
             }
         });
@@ -811,9 +858,43 @@ document.addEventListener('click', function (e) {
 
     // If click was inside the menu or on the toggle button, do nothing
     if (menu.contains(e.target) || (toggleBtn && toggleBtn.contains(e.target))) return;
+    // If click point lies within menu bounding rect, ignore (covers empty areas)
+    const rect = menu.getBoundingClientRect();
+    const x = e.clientX !== undefined ? e.clientX : (e.touches && e.touches[0] && e.touches[0].clientX);
+    const y = e.clientY !== undefined ? e.clientY : (e.touches && e.touches[0] && e.touches[0].clientY);
+    if (x !== undefined && y !== undefined) {
+        if (x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom) return;
+    }
 
     // Otherwise close the menu and clear inline styles / aria
     menu.classList.remove('active');
     menu.style.cssText = '';
     if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
+    const existing = document.getElementById('coursesMenuOverlay');
+    if (existing && existing.parentNode) existing.parentNode.removeChild(existing);
 });
+
+// Robust fallback: listen on pointerdown during capture phase so we
+// detect outside interactions before other handlers stop propagation.
+document.addEventListener('pointerdown', function (e) {
+    const menu = document.getElementById('coursesMegaMenu');
+    const toggleBtn = document.getElementById('coursesToggleBtn');
+    if (!menu || !menu.classList.contains('active')) return;
+
+    // If the pointerdown started inside the menu or toggle, ignore.
+    if (menu.contains(e.target) || (toggleBtn && toggleBtn.contains(e.target))) return;
+    // If pointerdown point lies within menu bounding rect, ignore (covers empty areas)
+    const rect = menu.getBoundingClientRect();
+    const x = e.clientX !== undefined ? e.clientX : (e.touches && e.touches[0] && e.touches[0].clientX);
+    const y = e.clientY !== undefined ? e.clientY : (e.touches && e.touches[0] && e.touches[0].clientY);
+    if (x !== undefined && y !== undefined) {
+        if (x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom) return;
+    }
+
+    // Otherwise close the menu immediately.
+    menu.classList.remove('active');
+    menu.style.cssText = '';
+    if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
+    const existing = document.getElementById('coursesMenuOverlay');
+    if (existing && existing.parentNode) existing.parentNode.removeChild(existing);
+}, true);
