@@ -16177,7 +16177,28 @@ img {
   font-weight: 600;
   letter-spacing: 1px;
 }
+
 .courses-mega-menu {
+    position: absolute;
+    top: 100%;              /* button ke just neeche */
+    left: 50%;              /* center point */
+    transform: translateX(-50%);  /* exact center alignment */
+    width: 95vw;            /* responsive width */
+    max-width: 1400px;      /* desktop limit */
+    display: none;
+    z-index: 9999;
+}
+
+/* Prevent CSS animations that cause an initial jump when JS sets inline styles */
+.courses-mega-menu {
+  transition: none !important;
+  will-change: left, width, transform, visibility;
+}
+
+
+
+
+/* .courses-mega-menu {
     position: absolute;
     top: 120%;
     right: 0;
@@ -16188,7 +16209,7 @@ img {
     border-radius: 10px;
     z-index: 999;
     overflow: hidden;
-}
+} */
 
 .courses-mega-menu.show {
     display: flex;
@@ -16498,28 +16519,53 @@ Main Style file-> assets/css/main.css
   display: none;
   position: absolute;
   top: 100%;
-  left: 35%;
-  margin-right: 8%;
-  transform: translateX(-50%);
+  left: 50%;
+  transform: translateX(-70%);
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 12px 48px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-  width: min(1500px, 100vw) !important;
-  max-width: 95vw !important;
+  z-index: 900;
+  /* Ensure menu doesn't shrink too small while remaining responsive */
+  min-width: 420px; /* default minimum */
+  width: min(1500px, 95vw);
   padding: 0;
   margin-top: 10px;
   animation: slideDown 0.18s ease-out;
   max-height: 900px;
   overflow-y: auto;
-  transition: none !important;
 }
 
+
 .courses-mega-menu.active {
-  display: flex !important;
+  display: flex;
   flex-direction: row;
-  right:10%;
 }
+
+/* Larger screens: slightly larger minimum to keep layout balanced */
+@media (min-width: 1200px) {
+  .courses-mega-menu {
+    min-width: 700px;
+  }
+}
+
+/* Medium screens: moderate minimum */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .courses-mega-menu {
+    min-width: 520px;
+  }
+}
+
+/* Small/mobile: allow full width (override min-width) */
+@media (max-width: 991px) {
+  .courses-mega-menu {
+    min-width: 0;
+    width: 100%;
+    left: 0;
+    transform: none;
+    max-width: 100vw;
+  }
+}
+
 
 @keyframes slideDown {
   from {

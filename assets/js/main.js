@@ -22,37 +22,23 @@
         const hamburger = document.querySelector('.header__hamburger');
         const sidebarToggle = document.querySelector('.sidebar__toggle');
 
-        // Handle hamburger click (toggle)
+        // Handle hamburger click
         if (hamburger) {
             hamburger.addEventListener('click', function(e) {
                 e.stopPropagation();
-                const isActive = mobileSidebar.classList.contains('active');
-                if (isActive) {
-                    mobileSidebar.classList.remove('active');
-                    mobileSidebarOverlay.classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                } else {
-                    mobileSidebar.classList.add('active');
-                    mobileSidebarOverlay.classList.add('active');
-                    document.body.style.overflow = 'hidden';
-                }
+                mobileSidebar.classList.add('active');
+                mobileSidebarOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
             });
         }
 
-        // Handle sidebar toggle click (toggle)
+        // Handle sidebar toggle click
         if (sidebarToggle) {
             sidebarToggle.addEventListener('click', function(e) {
                 e.stopPropagation();
-                const isActive = mobileSidebar.classList.contains('active');
-                if (isActive) {
-                    mobileSidebar.classList.remove('active');
-                    mobileSidebarOverlay.classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                } else {
-                    mobileSidebar.classList.add('active');
-                    mobileSidebarOverlay.classList.add('active');
-                    document.body.style.overflow = 'hidden';
-                }
+                mobileSidebar.classList.add('active');
+                mobileSidebarOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
             });
         }
 
@@ -145,8 +131,8 @@
             $(".offcanvas__overlay").removeClass("overlay-open");
         });
         $(".sidebar__toggle").on("click", function() {
-            $(".offcanvas__info").toggleClass("info-open");
-            $(".offcanvas__overlay").toggleClass("overlay-open");
+            $(".offcanvas__info").addClass("info-open");
+            $(".offcanvas__overlay").addClass("overlay-open");
         });
 
         //>> Body Overlay Js Start <<//
@@ -596,30 +582,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         
-    //
-
-        const courseBtn = document.getElementById("courseBtn");
-        const megaMenu = document.getElementById("megaMenu");
-
-        courseBtn.onclick = () => {
-            megaMenu.classList.toggle("show");
-        };
-
-        document.querySelectorAll(".mega-tab").forEach(tab => {
-            tab.onclick = function () {
-                document.querySelectorAll(".mega-tab").forEach(t => t.classList.remove("active"));
-                document.querySelectorAll(".mega-panel").forEach(p => p.classList.remove("active"));
-
-                this.classList.add("active");
-                document.getElementById(this.dataset.target).classList.add("active");
-            };
-        });
-
-        document.addEventListener("click", function (e) {
-            if (!megaMenu.contains(e.target) && !courseBtn.contains(e.target)) {
-                megaMenu.classList.remove("show");
-            }
-        });
+    
 
         function openTab(tabId) {
             document.querySelectorAll('.mega-panel').forEach(p => p.classList.remove('active'));
@@ -635,12 +598,66 @@ document.addEventListener('DOMContentLoaded', function () {
                 menu.classList.remove('wide');
             }
         }
+        // Courses Mega Menu Toggle Function (consolidated)
+        function toggleCoursesMegaMenu(event) {
+            if (event && event.stopPropagation) event.stopPropagation();
 
+            const menu = document.getElementById('coursesMegaMenu');
+            const btn = document.getElementById('coursesToggleBtn');
+            if (!menu) return;
 
-        // Unified toggle for Courses Mega Menu
-        // Works like mobile category toggle: opens/closes, closes siblings, and manages inline styles.
+            const isOpen = menu.classList.contains('active');
+            if (isOpen) {
+                menu.classList.remove('active');
+                // clear inline styles
+                menu.style.cssText = '';
+                return;
+            }
 
+            // Prepare menu offscreen/invisible to compute final size without visual jump
+            menu.style.visibility = 'hidden';
+            menu.style.display = 'flex';
+            menu.style.position = 'fixed';
+            menu.style.top = '0';
+            menu.style.left = '0';
+            menu.style.transform = 'none';
+            menu.style.width = 'auto';
+            menu.style.maxHeight = '90vh';
+            menu.style.overflowY = 'auto';
 
+            const vw = window.innerWidth || document.documentElement.clientWidth;
+            const rect = btn ? btn.getBoundingClientRect() : { left: Math.floor(vw / 2), bottom: 56, width: 0 };
+
+            // Small screens: full-width flush under header/button
+            if (vw <= 991) {
+                menu.style.left = '0';
+                menu.style.top = (rect.bottom + 6) + 'px';
+                menu.style.width = '100%';
+                menu.style.transform = 'none';
+                menu.style.zIndex = 1001;
+                menu.classList.add('active');
+                menu.style.visibility = '';
+                try { setCourseCategory('matric'); } catch (e) {}
+                return;
+            }
+
+            // Desktop: compute final left and width before making visible to avoid shift
+            const maxWidth = Math.min(1400, Math.floor(vw * 1.1));
+            let left = rect.left;
+            if (left + maxWidth > vw - 12) {
+                left = Math.max(12, vw - maxWidth - 12);
+            }
+            const widthPx = Math.max(Math.min(maxWidth, 1300), Math.min(maxWidth, Math.floor(rect.width * 1.6)));
+
+            menu.style.left = left + 'px';
+            menu.style.top = (rect.bottom + 6) + 'px';
+            menu.style.width = widthPx + 'px';
+            menu.style.zIndex = 1101;
+            menu.classList.add('active');
+            // now reveal
+            menu.style.visibility = '';
+            try { setCourseCategory('matric'); } catch (e) {}
+        }
 
         // Filter Courses by Category
         function filterCourseCategory(event, category) {
@@ -662,111 +679,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
 
-        // (Removed) old outside-click handler — replaced by a single robust listener below
-
-        function toggleCoursesMegaMenu(event) {
-            if (event) event.stopPropagation();
-
-            const wrapper = document.querySelector('.courses-menu-wrapper');
-            const menu = document.getElementById('coursesMegaMenu');
-            const toggleBtn = document.getElementById('coursesToggleBtn');
-            if (!menu || !wrapper) return;
-
-            const isActive = menu.classList.contains('active');
-
-            // Close any other open menus inside the same wrapper
-            wrapper.querySelectorAll('.courses-mega-menu').forEach(m => {
-                if (m !== menu && m.classList.contains('active')) {
-                    m.classList.remove('active');
-                    m.style.cssText = '';
-                }
-            });
-            // Toggle current menu (with overlay to reliably catch outside clicks)
-            const overlayId = 'coursesMenuOverlay';
-            function removeOverlay() {
-                const existing = document.getElementById(overlayId);
-                if (existing) {
-                    existing.removeEventListener('click', overlayClickHandler);
-                    existing.parentNode && existing.parentNode.removeChild(existing);
-                }
-            }
-
-            function overlayClickHandler(e) {
-                // If the click target is inside the menu element or within its bounding box, ignore
-                if (!e) e = window.event;
-                if (menu.contains(e.target)) return;
-                const rect = menu.getBoundingClientRect();
-                const x = e.clientX !== undefined ? e.clientX : (e.touches && e.touches[0] && e.touches[0].clientX);
-                const y = e.clientY !== undefined ? e.clientY : (e.touches && e.touches[0] && e.touches[0].clientY);
-                if (x !== undefined && y !== undefined) {
-                    if (x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom) return;
-                }
-
-                menu.classList.remove('active');
-                menu.style.cssText = '';
-                if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
-                removeOverlay();
-            }
-
-            if (isActive) {
-                menu.classList.remove('active');
-                menu.style.cssText = '';
-                if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
-                removeOverlay();
-            } else {
-                // Open menu and add full-page transparent overlay to capture outside clicks
-                menu.classList.add('active');
-                const widthPx = Math.min(1400, Math.floor(window.innerWidth * 0.95));
-                menu.style.cssText =
-                    "width:" + widthPx + "px !important;" +
-                    "left:35% !important;" +
-                    "transform:translateX(-50%) !important;" +
-                    "display:flex !important;" +
-                    "max-height:900px !important;" +
-                    "overflow-y:auto !important;" +
-                    "z-index:1001 !important;";
-
-                // ensure any previous overlay removed
-                removeOverlay();
-
-                const overlay = document.createElement('div');
-                overlay.id = overlayId;
-                overlay.style.position = 'fixed';
-                overlay.style.top = '0';
-                overlay.style.left = '0';
-                overlay.style.width = '100%';
-                overlay.style.height = '100%';
-                overlay.style.background = 'transparent';
-                overlay.style.zIndex = '1000';
-                overlay.style.cursor = 'default';
-                overlay.addEventListener('click', overlayClickHandler);
-                document.body.appendChild(overlay);
-
-                try { setCourseCategory('matric'); } catch (e) {}
-                if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'true');
-            }
-        }
         
-        const coursesMegaMenu = document.getElementById('coursesMegaMenu');
-            if (coursesMegaMenu) {
-                coursesMegaMenu.addEventListener('click', function (e) {
-                    e.stopPropagation();
-                });
-            }
-
-
-        // Close with Escape key when open
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                const coursesMegaMenu = document.getElementById('coursesMegaMenu');
-                if (coursesMegaMenu && coursesMegaMenu.classList.contains('active')) {
-                    coursesMegaMenu.classList.remove('active');
-                    coursesMegaMenu.style.cssText = '';
-                    const existing = document.getElementById('coursesMenuOverlay');
-                    if (existing) existing.parentNode && existing.parentNode.removeChild(existing);
-                }
-            }
-        });
         // Set default visible category function
         function setCourseCategory(category) {
             const tabs = document.querySelectorAll('.mega-menu-tab');
@@ -799,7 +712,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-        
        (() => {
   const collage = document.querySelector('.collage');
   const lightbox = document.getElementById('imageLightbox');
@@ -832,8 +744,8 @@ document.addEventListener('DOMContentLoaded', function () {
 //   });
 
   /* ---------- ESC KEY CLOSE ---------- */
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && lightbox.classList.contains('active')) {
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
       closeLightbox();
     }
   });
@@ -847,54 +759,63 @@ document.addEventListener('DOMContentLoaded', function () {
 
 })();
 
-// ===== Close Courses Mega Menu on Outside Click =====
-document.addEventListener('click', function (e) {
-    const menu = document.getElementById('coursesMegaMenu');
-    const toggleBtn = document.getElementById('coursesToggleBtn');
-    if (!menu) return;
 
-    // Only act when menu is open
-    if (!menu.classList.contains('active')) return;
 
-    // If click was inside the menu or on the toggle button, do nothing
+
+// ===== FORCE CLOSE COURSES MENU ON OUTSIDE CLICK (CAPTURE PHASE) =====
+document.addEventListener("pointerdown", function (e) {
+    const menu = document.getElementById("coursesMegaMenu");
+    const toggleBtn = document.getElementById("coursesToggleBtn");
+
+    if (!menu || !menu.classList.contains("active")) return;
+
+    // If clicking inside menu or on the button → ignore
     if (menu.contains(e.target) || (toggleBtn && toggleBtn.contains(e.target))) return;
-    // If click point lies within menu bounding rect, ignore (covers empty areas)
-    const rect = menu.getBoundingClientRect();
-    const x = e.clientX !== undefined ? e.clientX : (e.touches && e.touches[0] && e.touches[0].clientX);
-    const y = e.clientY !== undefined ? e.clientY : (e.touches && e.touches[0] && e.touches[0].clientY);
-    if (x !== undefined && y !== undefined) {
-        if (x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom) return;
-    }
 
-    // Otherwise close the menu and clear inline styles / aria
-    menu.classList.remove('active');
-    menu.style.cssText = '';
-    if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
-    const existing = document.getElementById('coursesMenuOverlay');
-    if (existing && existing.parentNode) existing.parentNode.removeChild(existing);
+    // Otherwise close menu
+    menu.classList.remove("active");
+    menu.style.cssText = "";
+}, true); // 👈 TRUE = capture phase (important)
+
+
+// (Duplicate removed) - consolidated `toggleCoursesMegaMenu` is defined earlier.
+
+// Category filter
+function filterCourseCategory(event, category) {
+    event.stopPropagation();
+
+    // Tabs active state
+    document.querySelectorAll(".mega-menu-tab").forEach(tab => {
+        tab.classList.remove("active");
+    });
+    event.currentTarget.classList.add("active");
+
+    // Show only selected category
+    document.querySelectorAll(".course-category").forEach(cat => {
+        if (cat.dataset.category === category) {
+            cat.style.display = "block";
+        } else {
+            cat.style.display = "none";
+        }
+    });
+}
+
+// OUTSIDE CLICK CLOSE
+document.addEventListener("click", function (e) {
+    const menu = document.getElementById("coursesMegaMenu");
+    const button = document.getElementById("coursesToggleBtn");
+
+    if (!menu || !button) return;
+
+    if (!menu.contains(e.target) && !button.contains(e.target)) {
+        menu.classList.remove("active");
+    }
 });
 
-// Robust fallback: listen on pointerdown during capture phase so we
-// detect outside interactions before other handlers stop propagation.
-document.addEventListener('pointerdown', function (e) {
-    const menu = document.getElementById('coursesMegaMenu');
-    const toggleBtn = document.getElementById('coursesToggleBtn');
-    if (!menu || !menu.classList.contains('active')) return;
-
-    // If the pointerdown started inside the menu or toggle, ignore.
-    if (menu.contains(e.target) || (toggleBtn && toggleBtn.contains(e.target))) return;
-    // If pointerdown point lies within menu bounding rect, ignore (covers empty areas)
-    const rect = menu.getBoundingClientRect();
-    const x = e.clientX !== undefined ? e.clientX : (e.touches && e.touches[0] && e.touches[0].clientX);
-    const y = e.clientY !== undefined ? e.clientY : (e.touches && e.touches[0] && e.touches[0].clientY);
-    if (x !== undefined && y !== undefined) {
-        if (x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom) return;
+// ESC KEY CLOSE
+document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+        const menu = document.getElementById("coursesMegaMenu");
+        if (menu) menu.classList.remove("active");
     }
-
-    // Otherwise close the menu immediately.
-    menu.classList.remove('active');
-    menu.style.cssText = '';
-    if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
-    const existing = document.getElementById('coursesMenuOverlay');
-    if (existing && existing.parentNode) existing.parentNode.removeChild(existing);
-}, true);
+});
