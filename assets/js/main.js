@@ -150,6 +150,13 @@
             } else {
                 $("#header-sticky").removeClass("sticky");
             }
+            
+            // Close courses mega menu on scroll
+            const coursesMegaMenu = document.getElementById('coursesMegaMenu');
+            if (coursesMegaMenu && coursesMegaMenu.classList.contains('active')) {
+                coursesMegaMenu.classList.remove('active');
+                coursesMegaMenu.style.cssText = '';
+            }
         });
 
 
@@ -599,6 +606,8 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
         // Courses Mega Menu Toggle Function (consolidated)
+        let lastSelectedCategory = 'diploma'; // Default to After +2 / Diploma
+
         function toggleCoursesMegaMenu(event) {
             if (event && event.stopPropagation) event.stopPropagation();
 
@@ -611,6 +620,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 menu.classList.remove('active');
                 // clear inline styles
                 menu.style.cssText = '';
+                if (btn) btn.classList.remove('active');
                 return;
             }
 
@@ -636,8 +646,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 menu.style.transform = 'none';
                 menu.style.zIndex = 1001;
                 menu.classList.add('active');
+                if (btn) btn.classList.add('active');
                 menu.style.visibility = '';
-                try { setCourseCategory('matric'); } catch (e) {}
+                try { setCourseCategory(lastSelectedCategory); } catch (e) {}
                 return;
             }
 
@@ -654,13 +665,17 @@ document.addEventListener('DOMContentLoaded', function () {
             menu.style.width = widthPx + 'px';
             menu.style.zIndex = 1101;
             menu.classList.add('active');
+            if (btn) btn.classList.add('active');
             // now reveal
             menu.style.visibility = '';
-            try { setCourseCategory('matric'); } catch (e) {}
+            try { setCourseCategory(lastSelectedCategory); } catch (e) {}
         }
 
         // Filter Courses by Category
         function filterCourseCategory(event, category) {
+            // Store the selected category for persistence
+            lastSelectedCategory = category;
+            
             const tabs = document.querySelectorAll('.mega-menu-tab');
             const courses = document.querySelectorAll('.course-category');
 
@@ -682,6 +697,8 @@ document.addEventListener('DOMContentLoaded', function () {
         
         // Set default visible category function
         function setCourseCategory(category) {
+            lastSelectedCategory = category; // Update the last selected category
+            
             const tabs = document.querySelectorAll('.mega-menu-tab');
             const courses = document.querySelectorAll('.course-category');
 
@@ -699,7 +716,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Initialize default active category on page load
         document.addEventListener('DOMContentLoaded', function() {
-            setCourseCategory('matric');
+            setCourseCategory('diploma'); // Default to After +2 / Diploma
         });
 
         // Update mega menu inline width when resizing if it's open
@@ -778,44 +795,27 @@ document.addEventListener("pointerdown", function (e) {
 }, true); // 👈 TRUE = capture phase (important)
 
 
-// (Duplicate removed) - consolidated `toggleCoursesMegaMenu` is defined earlier.
-
-// Category filter
-function filterCourseCategory(event, category) {
-    event.stopPropagation();
-
-    // Tabs active state
-    document.querySelectorAll(".mega-menu-tab").forEach(tab => {
-        tab.classList.remove("active");
-    });
-    event.currentTarget.classList.add("active");
-
-    // Show only selected category
-    document.querySelectorAll(".course-category").forEach(cat => {
-        if (cat.dataset.category === category) {
-            cat.style.display = "block";
-        } else {
-            cat.style.display = "none";
-        }
-    });
-}
-
-// OUTSIDE CLICK CLOSE
-document.addEventListener("click", function (e) {
-    const menu = document.getElementById("coursesMegaMenu");
-    const button = document.getElementById("coursesToggleBtn");
-
-    if (!menu || !button) return;
-
-    if (!menu.contains(e.target) && !button.contains(e.target)) {
-        menu.classList.remove("active");
+// ===== CAMPUS LIFE MOBILE SLIDER =====
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if the swiper element exists
+    const campusSwiperEl = document.querySelector('.campusLifeSwiper');
+    if (campusSwiperEl) {
+        new Swiper('.campusLifeSwiper', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            effect: 'slide'
+        });
     }
 });
 
-// ESC KEY CLOSE
-document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") {
-        const menu = document.getElementById("coursesMegaMenu");
-        if (menu) menu.classList.remove("active");
-    }
-});
+
+
