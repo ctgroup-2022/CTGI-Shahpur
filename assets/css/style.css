@@ -3,6 +3,30 @@
 	width: 100%;
     height:auto !important;
 	background-color: #000;
+	/* Push hero banner below the fixed/absolute header */
+	margin-top: 80px; /* Adjust based on header height */
+	position: relative;
+}
+.hero-banner::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%; /* Height of the gradient overlay */
+	background: linear-gradient(to top, var(--header), transparent);
+	opacity: 0.7; /* Adjust opacity as needed */
+	z-index: 1;
+	pointer-events: none;
+}
+.hero-banner__img {
+	position: relative;
+	z-index: 0;
+}
+@media (max-width: 991px) {
+	.hero-banner {
+		margin-top: 55px; /* Reduced margin for mobile */
+	}
 }
 .hero-banner__inner {
 	width: 100%;
