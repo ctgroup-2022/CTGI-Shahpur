@@ -809,7 +809,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 clickable: true,
             },
             autoplay: {
-                delay: 3000,
+                delay: 2000,
                 disableOnInteraction: false,
             },
             effect: 'slide'
@@ -817,5 +817,107 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// ===== FORM WIDGET LOADING =====
+document.addEventListener('DOMContentLoaded', function() {
+    // Check and fix form widget height
+    function checkFormWidgetLoading() {
+        try {
+            const formWidgets = document.querySelectorAll('.npf_wgts');
+            formWidgets.forEach((widget, index) => {
+                if (widget.offsetHeight < 20) {
+                    widget.style.height = "500px";
+                    widget.style.minHeight = "500px";
+                    widget.setAttribute("data-height", "500px");
+                }
+            });
+
+            // Reload the widget script if not loaded
+            if (formWidgets.length > 0 && !window.npfWidgetsLoaded) {
+                const reloadScript = document.createElement('script');
+                reloadScript.type = 'text/javascript';
+                reloadScript.async = !0;
+                reloadScript.src = 'https://widgets.nopaperforms.com/emwgts.js';
+                document.body.appendChild(reloadScript);
+                window.npfWidgetsLoaded = !0;
+            }
+        } catch (err) {
+            console.error("Error checking form widgets:", err);
+        }
+    }
+
+    // Initial check
+    setTimeout(checkFormWidgetLoading, 1000);
+
+    // Handle window load
+    window.addEventListener('load', function() {
+        setTimeout(checkFormWidgetLoading, 500);
+    });
+});
 
 
+
+let placementSwiperMobile;
+
+function togglePlacementLayout() {
+    if (window.innerWidth <= 767) {
+        var desktopSlider = document.querySelector('.placement-banner-slider');
+        if (desktopSlider) desktopSlider.style.display = 'none';
+        document.querySelector('.placement-banner-mobile').style.display = 'block';
+        if (!placementSwiperMobile) {
+            placementSwiperMobile = new Swiper(".placementSwiperMobile", {
+                slidesPerView: 1,
+                loop: true,
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                },
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                },
+                speed: 1500,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                }
+            });
+        }
+    } else {
+        var desktopSlider = document.querySelector('.placement-banner-slider');
+        if (desktopSlider) desktopSlider.style.display = 'block';
+        document.querySelector('.placement-banner-mobile').style.display = 'none';
+        if (placementSwiperMobile) {
+            placementSwiperMobile.destroy(true, true);
+            placementSwiperMobile = null;
+        }
+        // Init desktop swiper if not exists
+        const placementEl = document.querySelector('.placement-banner-slider .swiper');
+        if (placementEl && !placementEl.swiper) {
+            new Swiper(placementEl, {
+                loop: true,
+                speed: 1500,
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                },
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false
+                },
+                slidesPerView: 1,
+                spaceBetween: 0,
+                allowTouchMove: false
+            });
+        }
+        // Start autoplay after delay
+        setTimeout(() => {
+            if (placementEl && placementEl.swiper) {
+                placementEl.swiper.autoplay.start();
+            }
+        }, 500);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', togglePlacementLayout);
+window.addEventListener('load', togglePlacementLayout);
+window.addEventListener('resize', togglePlacementLayout);

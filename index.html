@@ -41,7 +41,11 @@
         <!--<< Main.css >>-->
         <link rel="stylesheet" href="assets/css/main.css">
         <!--<< Style.css >>-->
-        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/style.css?v=37">
+
+        <!--<link rel="stylesheet" href="assets/css/style.css">-->
+        <!--<< NoPaperForms Widget >>-->
+        <!--<script type="text/javascript" src="https://widgets.nopaperforms.com/emwgts.js" id="npfwidget" async></script>-->
         <style>
         /* Make course list items clickable while preserving text appearance */
         .course-list a {
@@ -219,7 +223,7 @@
                         <!-- After +2 / Diploma -->
                         <li class="mobile-submenu-item">
                             <span class="mobile-submenu-category" onclick="toggleMobileCoursesCategory(this)">
-                                <i class="fas fa-chevron-right"></i> After +2 / Diploma
+                                <i class="fas fa-chevron-right"></i> After 10+2 / Diploma
                             </span>
                             <ul class="mobile-sub-list">
                                 <li><a href="#popular-courses"><strong>Engineering & Architecture</strong></a></li>
@@ -357,7 +361,7 @@
                                             <aside class="mega-menu-side">
                                                 <div class="mega-menu-tabs">
                                                         <button class="mega-menu-tab active" data-cat="matric" onclick="filterCourseCategory(event, 'matric')">After Matric (10th)</button>
-                                                        <button class="mega-menu-tab" data-cat="diploma" onclick="filterCourseCategory(event, 'diploma')">After +2 / Diploma</button>
+                                                        <button class="mega-menu-tab" data-cat="diploma" onclick="filterCourseCategory(event, 'diploma')">After 10+2 / Diploma</button>
                                                         <button class="mega-menu-tab" data-cat="graduation" onclick="filterCourseCategory(event, 'graduation')">After Graduation</button>
                                                 </div>
                                             </aside>
@@ -586,14 +590,61 @@
                 </div>
         </header>
         </section>
-        <!-- Hero Section Start: single responsive banner (no swiper, no cropping) -->
-        <section class="hero-banner">
 
-                    <!-- You can add alternate/responsive sources here if you have multiple sizes -->
-                    <img src="assets/img/hero/banner.jpeg" alt="CT Shahpur Banner" class="hero-banner__img " loading="eager" fetchpriority="high">
-                
-           
-        </section>
+       <!-- HERO BANNER -->
+<section class="hero-banner-with-form">
+    <div class="hero-banner">
+        <img src="assets/img/hero/banner.jpeg" alt="Banner" class="hero-banner__img">
+
+        <!-- DESKTOP FORM (OVERLAY) -->
+        <div class="hero-form-container">
+            <div class="form-card">
+                <h3 class="text-center mb-4">Admission Open for 2026</h3>
+                <div class="npf_wgts" data-height="500px" data-w="2743d30be1e47dee1d6b9c317be514e9"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MOBILE FORM (SEPARATE SECTION) -->
+<section class="mobile-form-section">
+    <div class="form-card">
+        <h3 class="text-center mb-4">Admission Open for 2026</h3>
+        <div class="npf_wgts" data-height="500px" data-w="2743d30be1e47dee1d6b9c317be514e9"></div>
+    </div>
+</section>
+
+        <!-- Hero Section with Form on Right -->
+        <!-- <section class="hero-banner-with-form">
+            <div class="hero-banner">
+                <-- Original banner image -->
+                <!-- <img src="assets/img/hero/banner.jpeg" alt="CT Shahpur Banner" class="hero-banner__img " loading="eager" fetchpriority="high">
+            </div>  -->
+            <!-- <div class="hero-form-container d-none d-lg-flex">
+                <div class="form-card fade-in appear">
+                    <h3 class="text-center mb-4">Enroll Now</h3>
+                    <div class="npf_wgts" data-height="500px" data-w="2743d30be1e47dee1d6b9c317be514e9" style="height: 500px; min-height: 500px;">
+                        <iframe frameborder="0" width="100%" height="500px" sandbox="allow-top-navigation allow-scripts allow-same-origin allow-downloads" src="https://widgets.nopaperforms.com/register?&amp;r=&amp;q=&amp;w=2743d30be1e47dee1d6b9c317be514e9&amp;m=&amp;cu=http://enroll.ctgroup.in/"></iframe>
+                    </div>
+                </div>
+            </div> -->
+        <!-- </section> -->
+
+        <!-- Mobile Form Section -->
+        <!-- <section class="mobile-form-section d-block d-lg-none">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div class="form-card fade-in appear">
+                            <h3 class="text-center mb-4">Enroll Now</h3>
+                            <div class="npf_wgts" data-height="500px" data-w="2743d30be1e47dee1d6b9c317be514e9" style="height: 500px; min-height: 500px;">
+                                <iframe frameborder="0" width="100%" height="500px" sandbox="allow-top-navigation allow-scripts allow-same-origin allow-downloads" src="https://widgets.nopaperforms.com/register?&amp;r=&amp;q=&amp;w=2743d30be1e47dee1d6b9c317be514e9&amp;m=&amp;cu=http://enroll.ctgroup.in/"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
 
         <!-- About Section Start -->
         <div class="about-section-3 section-padding">
@@ -613,20 +664,22 @@
                                 </span>
                             </div>
 
-                            <p class="mt-3 mt-md-0 wow fadeInUp" style="font-size:15px; line-height:1.6; " data-wow-delay=".5s">
-                            CT Group of Institutions, Shahpur Campus is a future-ready education hub focused on excellence, skills, and career growth. With NAAC ‘A’ Grade accreditation, industry-aligned programs, and strong placement support, students are prepared for corporate roles, entrepreneurship, and research-driven careers.
+                            <p class="mt-3 mt-md-0 wow fadeInUp" style="font-size:15px; line-height:1.9; " data-wow-delay=".5s">
+                            CT Group of Institutions, Shahpur Campus is a future-ready educational hub committed to academic excellence, skill development, and career growth. With CTIEMT accredited with NAAC ‘A’ Grade, industry-aligned programs, and robust placement support, students are well prepared for corporate careers, entrepreneurship, and research-oriented pathways.
                         </p>
 
-                        <div class="row about-points wow fadeInUp mt-3" data-wow-delay=".6s">
-                            <div class="col-md-6">
+                        <h4 class="text-white wow fadeInUp mt-3" data-wow-delay=".5s" style="font-size:18px; font-weight:600;">The campus offers:</h4>
+                            <div class="row about-points wow fadeInUp mt-3" data-wow-delay=".6s">
+                            <div class="col-md-6"> 
+                                
                                 <ul class="list-unstyled">
                                     <li class="mb-2 text-white text-lg-start">
                                         <i class="fas fa-check-circle point-icon me-2"></i>
-                                        PhD-qualified faculty with industry mentors
+                                        Ph.D. qualified faculty supported by industry mentors
                                     </li>
                                     <li class="mb-2 text-white text-lg-start">
                                         <i class="fas fa-check-circle point-icon me-2"></i>
-                                        Advanced labs & smart classrooms
+                                        Advanced laboratories and smart classrooms
                                     </li>
                                 </ul>
                             </div>
@@ -638,7 +691,7 @@
                                     </li>
                                     <li class="mb-2 text-white text-lg-start">
                                         <i class="fas fa-check-circle point-icon me-2"></i>
-                                        Dedicated placement & career guidance
+                                        Dedicated placement assistance and career guidance
                                     </li>
                                 </ul>
                             </div>
@@ -682,7 +735,7 @@
                             </div>
                             <div class="counter-box">
                                 <p>Serving Over</p>
-                                <h2><span class="odometer" data-count="4500">00</span>+</h2>
+                                <h2><span class="odometer" data-count="10000">00</span>+</h2>
                                 <p>Students Every Year</p>
                             </div>
                         </div>
@@ -698,23 +751,31 @@
             <div class="mycustom-marque style-3">
                 <div class="scrolling-wrap">
                     <div class="comm">
-                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> CT Group</div>
-                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> NAAC A</div>
-                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> Career Ready</div>
-                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> Skill Driven</div>
+                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> Placement Assurance</div>
+                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> Global Leaders</div>
+                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> Research Oriented</div>
+                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> Incubation Centre</div>
                     </div>
                     <div class="comm">
+                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> Placement Assurance</div>
+                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> Global Leaders</div>
+                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> Research Oriented</div>
+                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> Incubation Centre</div>
+                    </div>
+                    <!-- <div class="comm">
                         <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> CT Group</div>
                         <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> NAAC A</div>
                         <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> Career Ready</div>
                         <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> Skill Driven</div>
-                    </div>
-                     <div class="comm">
+                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> Global Leaders</div>
+                        <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> NAAC A</div>
+                    </div> -->
+                     <!-- <div class="comm">
                         <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> CT Group</div>
                         <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> NAAC A</div>
                         <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> Career Ready</div>
                         <div class="cmn-textslide"><i class="flaticon-mortarboard-1"></i> Skill Driven</div>
-                    </div>
+                    </div> -->
                 </div>
                 </div>
             </div>
@@ -727,16 +788,16 @@
             <div class="container">
 
                 <!-- Heading -->
-                <div class="admission-heading ">
-                <h6 class="tech-partner-subtitle">Programs Offered</h6>
-                <h2>Choose a program aligned with your career goals</h2>
+                <div class="admission-heading text-center " >
+                <h6 class="section-title text-center">Programs Offered</h6>
+                <h2 class="program-title py-4">Choose a program aligned with your career goals</h2>
                 <!-- <p>Admissions Open for the Following Programs</p> -->
                 </div>
 
                 <!-- Tabs -->
                 <div class="program-tabs ">
-                <button class="tab-btn " onclick="openProgram(event,'matric')">After Matric</button>
-                <button class="tab-btn active" onclick="openProgram(event,'plus2')">After +2 / Diploma</button>
+                <button class="tab-btn " onclick="openProgram(event,'matric')">After Matric (10th)</button>
+                <button class="tab-btn active" onclick="openProgram(event,'plus2')">After 10+2 / Diploma</button>
                 <button class="tab-btn" onclick="openProgram(event,'graduation')">After Graduation</button>
                 </div>
 
@@ -824,7 +885,7 @@
 
                 <!-- ================= AFTER +2 / DIPLOMA ================= -->
                 <div id="plus2" class="program-tab-content active">
-                <h3 class="program-level">After +2 / Diploma</h3>
+                <h3 class="program-level">After 10+2 / Diploma</h3>
 
                 <table class="program-table">
                     <thead>
@@ -1039,73 +1100,146 @@
          <!-- Counter Start -->
 
         <section class="p-5 fade-in-section mb-2 ultra-glossy-bg" style="position: relative; overflow: hidden;">
-        <h2 class=" text-center mb-5 wow fadeInLeft" style="font-weight:600; color: #FFF6E9;">CT Group Legacy</h2><br>
+            <h2 class="text-center mb-2 wow fadeInLeft" style="font-weight:700; color: #FFD700; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">CT Group's Legacy</h2>
+            <p class="text-center wow fadeInLeft" style="font-size: 1.1em; color: #FFF6E9; font-weight: 500; margin-top: 0;">Shaping Your Future from Pre-Nursery to Ph.D.</p>
+            <br>
 
-            <!-- Statistics -->
             <div class="flex-box wrapper-1200 text-center home-stats-wrapper" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
 
-               <div class="flex-child ele-animate-box wow fadeInUp" data-wow-delay="0.2s" data-eleanimatetype="bottom-to-top" data-eleanimateon="70" data-eleloop="false" data-eledelay="00" style="flex: 1 1 150px;">
-                  <div class="stats-icon" style="color: #FFF6E9">
-                     <img src="assets/img/counter/25 png.png" alt="25+ Years">
-                  </div>
-                  <div class="home-stats-text">
-                     <h4 class="text-white">Years </h4>
-                     <p class="text-white"> Since 1997</p>
-                  </div>
-               </div>
+                <!-- 25+ Years -->
+                <div class="flex-child ele-animate-box wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="stats-icon">
+                        <img src="assets/img/counter/award.png" alt="25+ Years">
+                    </div>
+                    <div class="home-stats-text">
+                        <h4 class="text-white">25+</h4>
+                        <span class="text-white" >Years</span>
+                        <p class="text-white">Thriving Since 1997</p>
+                    </div>
+                </div>
 
-               <div class="flex-child ele-animate-box wow fadeInUp" data-wow-delay="0.4s" data-eleanimatetype="bottom-to-top" data-eleanimateon="70" data-eleloop="false" data-eledelay="00" style="flex: 1 1 150px;">
-                  <div class="stats-icon">
-                     <img src="assets/img/counter/classmates.png" alt="12000+ Students">
-                  </div>
-                  <div class="home-stats-text">
-                     <h4 class="text-white">1 Lac+</h4>
-                     <p class="text-white">Alumni</p>
-                  </div>
-               </div>
+                <!-- 1 Lac+ Alumni -->
+                <div class="flex-child ele-animate-box wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="stats-icon">
+                        <img src="assets/img/counter/classmates.png" alt="1 Lac+ Alumni">
+                    </div>
+                    <div class="home-stats-text">
+                        <h4 class="text-white">1 Lac+</h4>
+                        <span class="text-white" >Alumni</span>
+                        <p class="text-white">Across the Globe</p>
+                    </div>
+                </div>
 
-               <div class="flex-child ele-animate-box wow fadeInUp" data-wow-delay="0.6s" data-eleanimatetype="bottom-to-top" data-eleanimateon="70" data-eleloop="false" data-eledelay="400" style="flex: 1 1 150px;">
-                  <div class="stats-icon">
-                     <img src="assets/img/counter/schools.png" alt="4 Mega Campuses">
-                  </div>
-                  <div class="home-stats-text">
-                     <h4 class="text-white">5</h4>
-                     <p class="text-white">Mega Campuses</p>
-                  </div>
-               </div>
+                <!-- 20000+ Placements -->
+                <div class="flex-child ele-animate-box wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="stats-icon">
+                        <img src="assets/img/counter/schools.png" alt="20000+ Placements">
+                    </div>
+                    <div class="home-stats-text">
+                        <h4 class="text-white">20000+</h4>
+                        <span class="text-white" >Placements</span> 
+                        <p class="text-white">State-of-the-Art Facilities</p>
+                    </div>
+                </div>
 
-               <div class="flex-child ele-animate-box wow fadeInUp" data-wow-delay="0.8s" data-eleanimatetype="bottom-to-top" data-eleanimateon="70" data-eleloop="false" data-eledelay="600" style="flex: 1 1 150px;">
-                  <div class="stats-icon">
-                     <img src="assets/img/counter/children.png" alt="2 Schools">
-                  </div>
-                  <div class="home-stats-text">
-                     <h4 class="text-white">18000+</h4>
-                     <p class="text-white">Students</p>
-                  </div>
-               </div>
+                <!-- 18000+ Students -->
+                <div class="flex-child ele-animate-box wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="stats-icon">
+                        <img src="assets/img/counter/children.png" alt="18000+ Students">
+                    </div>
+                    <div class="home-stats-text">
+                        <h4 class="text-white">18000+</h4>
+                        <span class="text-white" >Students</span>
+                        <p class="text-white">100+ Future-Ready Programs</p>
+                    </div>
+                </div>
 
-               <div class="flex-child ele-animate-box wow fadeInUp" data-wow-delay="1s" data-eleanimatetype="bottom-to-top" data-eleanimateon="70" data-eleloop="false" data-eledelay="200" style="flex: 1 1 150px;">
-                  <div class="stats-icon">
-                     <img src="assets/img/counter/bank.png" alt="17+ Institutions">
-                  </div>
-                  <div class="home-stats-text">
-                     <h4 class="text-white">17+</h4>
-                     <p class="text-white">Institutions</p>
-                  </div>
-               </div>
+                <!-- 5 Mega Campuses -->
+                <div class="flex-child ele-animate-box wow fadeInUp" data-wow-delay="1s">
+                    <div class="stats-icon">
+                        <img src="assets/img/counter/bank.png" alt="5 Mega Campuses">
+                    </div>
+                    <div class="home-stats-text">
+                        <h4 class="text-white">5</h4>
+                        <span class="text-white" >Mega Campuses</span>
+                        <p class="text-white">Powered by High-Tech Facilities</p>
+                    </div>
+                </div>
 
-               <div class="flex-child ele-animate-box wow fadeInUp" data-wow-delay="1.5s" data-eleanimatetype="bottom-to-top" data-eleanimateon="70" data-eleloop="false" data-eledelay="600" style="flex: 1 1 150px;">
-                  <div class="stats-icon">
-                     <img src="assets/img/counter/teacher.png" alt="650+ Faculty Members">
-                  </div>
-                  <div class="home-stats-text">
-                     <h4 class="text-white">700+</h4>
-                     <p class="text-white">Faculty Members</p>
-                  </div>
-               </div>
-               <!-- Add more stats here -->
+                <!-- 700+ Faculty -->
+                <div class="flex-child ele-animate-box wow fadeInUp" data-wow-delay="1.2s">
+                    <div class="stats-icon">
+                        <img src="assets/img/counter/teacher.png" alt="700+ Faculty Members">
+                    </div>
+                    <div class="home-stats-text">
+                        <h4 class="text-white">700+</h4>
+                        <span class="text-white" >Faculty Members</span>
+                        <p class="text-white">Focused on Real-World Learning</p>
+                    </div>
+                </div>
+
             </div>
-         </section>
+        </section>
+
+        <!-- Marquee Section Start -->
+        <div class="container recruiter-heading py-5" id="logos">
+            
+    
+            <!-- <h6>Recruiters at CT Group</h6> -->
+             <div class="tech-partner-header text-center">
+            <h6 class="section-title text-center">Recruiters</h6>
+            <h2 class="mb-3 tech-partner-title ">Our Top Hiring Partners </h2>
+             </div>
+            <!-- <h2 class="mb-3 "> Our Placement Support</h2> -->
+            <!-- <p class="text-center text-dark_text px-3 px-sm-4 px-md-5 px-lg-5 font-weight-bold mb-4 fs-6" >
+                We support students throughout their academic journey with career guidance,
+            industry exposure, and placement assistance to help them step confidently
+            into the professional world.
+            </p> -->
+            
+            <div class="marquee-container row">
+                <div class="marquee-content marquee-left col-lg-12" id="marquee1"></div>
+            </div>
+            
+            <div class="marquee-container">
+                <div class="marquee-content marquee-right col-lg-12" id="marquee2"></div>
+            </div>
+        </div>
+
+         <!-- Technical Collaboration Section -->
+        <section class="tech-partner-elegant section-padding">
+            <div class="container">
+
+                <div class="tech-partner-header recruiter-heading py-5 text-center">
+                    <h6 class="section-title technical">Technical Collaboration</h6>
+                    <h2 class="tech-partner-title">
+                        Powering Progress Through <span>Technical Partnership</span>
+                    </h2>
+                </div>
+
+                <div class="tech-partner-wrapper">
+                    <div class="partner-item">
+                        <img src="assets/img/collaborations/cisco.png" alt="Cisco">
+                    </div>
+                    <div class="partner-item">
+                        <img src="assets/img/collaborations/nptel.png" alt="NPTEL">
+                    </div>
+                    <div class="partner-item">
+                        <img src="assets/img/collaborations/aws.png" alt="AWS Academy">
+                    </div>
+                    <div class="partner-item">
+                        <img src="assets/img/collaborations/csi.png" alt="CSI">
+                    </div>
+                    <div class="partner-item">
+                        <img src="assets/img/collaborations/swayam.png" alt="Swayam">
+                    </div>
+                    <div class="partner-item">
+                        <img src="assets/img/collaborations/oracle_academy.png" alt="Oracle">
+                    </div>
+                </div>
+
+            </div>
+        </section>
 
         <!-- Counter Section -->
         <!-- <section>
@@ -1164,14 +1298,14 @@
 
             <!-- Placement Images -->
             <div class="placement-gallery">
-                <img src="assets/img/placement/CTU_3.png" alt="Top Placements">
+                <!-- <img src="assets/img/placement/CTU_3.png" alt="Top Placements">
                 <img src="assets/img/placement/CTU_4.png" alt="Student Placements">
                 <img src="assets/img/placement/CTU_5.png" alt="Top Placements">
-                <img src="assets/img/placement/CTU_6.png" alt="Top Placements">
+                <img src="assets/img/placement/CTU_6.png" alt="Top Placements"> -->
 
 
 
-            <!-- <div class="placement-card">
+            <div class="placement-card style">
                 <img src="assets/img/placement/CTU_3.png" alt="Top Placements">
             </div>
 
@@ -1185,74 +1319,77 @@
 
             <div class="placement-card">
                 <img src="assets/img/placement/CTU_6.png" alt="Top Placements">
-            </div>-->
+            </div>
 
             </div>
-            <div class="banner">
+
+            <!-- Placement Banner Slider -->
+            <div class="placement-banner-slider">
+            <div class="swiper th-slider container"
+                data-slider-options='{
+                    "loop": true,
+                    "speed": 6000,
+                    "autoplay": {
+                        "delay": 0,
+                        "disableOnInteraction": false
+                    },
+                    "slidesPerView": 1,
+                    "spaceBetween": 0,
+                    "allowTouchMove": false
+                }'>
+
+                <div class="swiper-wrapper ">
+
+                    <div class="swiper-slide">
+                        <div class="banner-slide"
+                             style="background:url(assets/img/placement/p11.jpg) no-repeat center;
+                                    background-size:contain;
+                                    height:605px;
+                                    border-radius:15px;">
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="banner-slide"
+                             style="background:url(assets/img/placement/p12.jpg) no-repeat center;
+                                    background-size:contain;
+                                    height:605px;
+                                    border-radius:15px;">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+<!-- Mobile Banner Slider -->
+<div class="placement-banner-mobile" style="display:none; margin-top:20px;">
+    <div class="swiper placementSwiperMobile">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><div style="background:url(assets/img/placement/b211.png) no-repeat center; background-size:contain; height:400px; border-radius:12px;"></div></div>
+            <div class="swiper-slide"><div style="background:url(assets/img/placement/b212.png) no-repeat center; background-size:contain; height:400px; border-radius:12px;"></div></div>
+            <div class="swiper-slide"><div style="background:url(assets/img/placement/b213.png) no-repeat center; background-size:contain; height:400px; border-radius:12px;"></div></div>
+            <div class="swiper-slide"><div style="background:url(assets/img/placement/p219.png) no-repeat center; background-size:contain; height:400px; border-radius:12px;"></div></div>
+              <div class="swiper-slide"><div style="background:url(assets/img/placement/b215.png) no-repeat center; background-size:contain; height:400px; border-radius:12px;"></div></div>
+            <div class="swiper-slide"><div style="background:url(assets/img/placement/b216.png) no-repeat center; background-size:contain; height:400px; border-radius:12px;"></div></div>
+            <div class="swiper-slide"><div style="background:url(assets/img/placement/b217.png) no-repeat center; background-size:contain; height:400px; border-radius:12px;"></div></div>
+            <div class="swiper-slide"><div style="background:url(assets/img/placement/p220.png) no-repeat center; background-size:contain; height:400px; border-radius:12px;"></div></div>
+             
+         
+        </div>
+      
+    </div>
+</div>
+
+
+            
+            <!-- <div class="banner">
                 <img src="assets/img/placement/p5.png" alt="Banner" style="width: 90%; height: auto;" >
-            </div> 
+            </div>  -->
         </div>
         </section>
 
-        <!-- Marquee Section Start -->
-        <div class="container recruiter-heading py-5" id="logos">
-            
-    
-            <!-- <h6>Recruiters at CT Group</h6> -->
-             <div class="tech-partner-header text-center">
-            <h6 class="tech-partner-subtitle text-center">Recruiters</h6>
-            <h2 class="mb-3 tech-partner-title ">Our Top Hiring Partners </h2>
-             </div>
-            <!-- <h2 class="mb-3 "> Our Placement Support</h2> -->
-            <!-- <p class="text-center text-dark_text px-3 px-sm-4 px-md-5 px-lg-5 font-weight-bold mb-4 fs-6" >
-                We support students throughout their academic journey with career guidance,
-            industry exposure, and placement assistance to help them step confidently
-            into the professional world.
-            </p> -->
-            
-            <div class="marquee-container row">
-                <div class="marquee-content marquee-left col-lg-12" id="marquee1"></div>
-            </div>
-            
-            <div class="marquee-container">
-                <div class="marquee-content marquee-right col-lg-12" id="marquee2"></div>
-            </div>
-        </div>
-
-         <!-- Technical Collaboration Section -->
-        <section class="tech-partner-elegant section-padding">
-            <div class="container">
-
-                <div class="tech-partner-header text-center">
-                    <span class="tech-partner-subtitle">TECHNICAL COLLABORATION</span>
-                    <h2 class="tech-partner-title">
-                        Powering Progress Through <span>Technical Partnership</span>
-                    </h2>
-                </div>
-
-                <div class="tech-partner-wrapper">
-                    <div class="partner-item">
-                        <img src="assets/img/collaborations/cisco.png" alt="Cisco">
-                    </div>
-                    <div class="partner-item">
-                        <img src="assets/img/collaborations/nptel.png" alt="NPTEL">
-                    </div>
-                    <div class="partner-item">
-                        <img src="assets/img/collaborations/aws.png" alt="AWS Academy">
-                    </div>
-                    <div class="partner-item">
-                        <img src="assets/img/collaborations/csi.png" alt="CSI">
-                    </div>
-                    <div class="partner-item">
-                        <img src="assets/img/collaborations/swayam.png" alt="Swayam">
-                    </div>
-                    <div class="partner-item">
-                        <img src="assets/img/collaborations/oracle.png" alt="Oracle">
-                    </div>
-                </div>
-
-            </div>
-        </section>
+        
 
     
         
@@ -1384,7 +1521,7 @@
 
             ```
             <h2 class="section-title text-white text-center mb-4">
-            LIFE AT CTGI SHAHPUR CAMPUS
+            Life beyond Classrooms
             </h2>
             <p class="text-light opacity-75">
             Learn, grow and succeed in a vibrant & safe campus environment
@@ -1707,50 +1844,62 @@
         
       
         <!-- Affiliations & Accreditations Section -->
-<section class="affiliations-section section-padding">
-    <div class="container">
-        <div class="row align-items-center g-5">
+        <section class="affiliations-section section-padding">
+            <div class="container">
+                <div class="row align-items-center g-5">
 
-            <!-- Left Content -->
-            <div class="col-lg-5">
-                <div class="affiliations-content">
-                    <span class="affiliations-subtitle tech-partner-subtitle">AFFILIATIONS</span>
-                    <h2 class="affiliations-title">
-                        OUR <span>ACCREDITATIONS & RECOGNITIONS</span>
-                    </h2>
-                    <p class="affiliations-text">
-                        Recognized and accredited for delivering quality education and standards
-                    </p>
+                    <!-- Left Content -->
+                    <div class="col-lg-5">
+                        <div class="affiliations-content recruiter-heading py-5 text-center">
+                            <h6 class="section-title text-center">Affiliations</h6>
+                            <h2 class="affiliations-title ">
+                                OUR <span>ACCREDITATIONS & RECOGNITIONS</span>
+                            </h2>
+                            <p class="affiliations-text">
+                                Recognized and accredited for delivering quality education and standards
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right Logos Grid -->
+                    <div class="col-lg-7">
+                        <div class="affiliations-logos">
+                            <div class="logo-box"><img src="assets/img/accreditations/1.png" alt="NAAC"></div>
+                            <div class="logo-box"><img src="assets/img/accreditations/2.png" alt="AICTE"></div>
+                            <div class="logo-box"><img src="assets/img/accreditations/3.png" alt="BOS"></div>
+                            <div class="logo-box"><img src="assets/img/accreditations/4.png" alt="CIE"></div>
+
+                            <div class="logo-box"><img src="assets/img/accreditations/6.png" alt="IKG PTU"></div>
+                            <div class="logo-box"><img src="assets/img/accreditations/7.png" alt="GNDU"></div>
+                            <div class="logo-box"><img src="assets/img/accreditations/8.png" alt="NCHMCT"></div>
+                            <div class="logo-box"><img src="assets/img/accreditations/9.png" alt="TECH ED"></div>
+                        
+                            <div class="logo-box"><img src="assets/img/accreditations/11.png" alt="UGC"></div>
+                            <div class="logo-box"><img src="assets/img/accreditations/12.png" alt="NCTE"></div>
+                            <div class="logo-box"><img src="assets/img/accreditations/13.png" alt="CSI"></div>
+                            <div class="logo-box"><img src="assets/img/accreditations/iso.png" alt="ISO"></div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-
-            <!-- Right Logos Grid -->
-            <div class="col-lg-7">
-                <div class="affiliations-logos">
-                    <div class="logo-box"><img src="assets/img/accreditations/1.png" alt="NAAC"></div>
-                    <div class="logo-box"><img src="assets/img/accreditations/2.png" alt="AICTE"></div>
-                    <div class="logo-box"><img src="assets/img/accreditations/6.png" alt="IKG PTU"></div>
-                    <div class="logo-box"><img src="assets/img/accreditations/7.png" alt="GNDU"></div>
-
-                    <div class="logo-box"><img src="assets/img/accreditations/11.png" alt="UGC"></div>
-                    <div class="logo-box"><img src="assets/img/accreditations/12.png" alt="NCTE"></div>
-                    <div class="logo-box"><img src="assets/img/accreditations/13.png" alt="CSI"></div>
-                    <div class="logo-box"><img src="assets/img/accreditations/is.png" alt="ISO"></div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
+        </section>
 
 
         <!-- Global Partners Section Start -->
         <section class="global-partners-section fix section-padding">
             <div class="container">
-                <div class="section-title color-red text-center">
-                    <h2 class="wow fadeInUp">
-                         Awards and Achievements
+                <div class="admission-heading color-red text-center">
+                    <h6 class="text-center">Achievements</h6>
+
+                    <h2 class="awards-title py-3">
+                        OUR <span>AWARDS & ACHIEVEMENTS</span>
                     </h2>
+
+                    <p class="awards-text">
+                        Celebrating milestones, honors, and recognitions earned through excellence in education and innovation
+                    </p>
+
                 </div>
                 <div class="global-partner-wrapper " style="background-color: var(--bg5);">
                     <div class="row g-4 align-items-center">
@@ -2131,13 +2280,13 @@
        
 
         <!-- Testimonial Section Start -->
-        <section class="testimonial-section-3 fix pt-4 section-padding bg-cover"
+        <section class="testimonial-section-3 fix section-padding bg-cover"
             style="background-image: url('assets/img/testimonial/.jpg');">
 
-            <div class="container py-5">
+            <div class="container students py-5">
 
                 <!-- Section Title -->
-                <div class="section-title section-heading text-center mb-5">
+                <div class="section-title recruiter-heading text-center mb-5">
                 <h6 class=" student-review ">Students Reviews</h6>
                 <h2 class=" voice">
                     Voice Of Our Students
@@ -2171,8 +2320,8 @@
                         <div class="section-title color-red">
                     
 
-                            <h6 class="wow fadeInUp">Asked Questions</h6>
-                            <h2 class="wow fadeInUp" data-wow-delay=".3s">
+                            <h6 class="wow fadeInUp mb-3">Asked Questions</h6>
+                            <h2 class="wow fadeInUp mt-2" data-wow-delay=".3s">
                                 Frequently Asked Questions
                             </h2>
                             <!-- <p>Find answers to common questions related to admissions at CTGI – Shahpur Campus.</p> -->
@@ -2359,8 +2508,7 @@
                     </h2>
                     <p class="chairman-subtitle">
                         Explore our dynamic campus from anywhere in the world with our immersive Virtual Tour. 
-                        Discover your gateway to quality education, modern infrastructure, and a vibrant student community —
-                        all from the comfort of your home.
+                        
                     </p>
                 </div>
 
@@ -2448,99 +2596,12 @@
 
         <!-- Footer Section Start -->
         <footer class="footer-section-3 fix">
-            <div class="circle-shape">
-                <img src="assets/img/footer/circle.png" alt="img">
-            </div>
-            <div class="vector-shape">
-                <img src="assets/img/footer/Vector.png" alt="img">
-            </div>
-            <!-- <div class="container">
-                <div class="footer-widget-wrapper style-2">
-                    <div class="row">
-                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
-                            <div class="single-footer-widget">
-                                <div class="widget-head">
-                                    <a href="index.html">
-                                        <img src="assets/img/logo/black-logo-3.svg" alt="img">
-                                    </a>
-                                </div>
-                                <div class="footer-content">
-                                    <p>
-                                        Education the foundation personal and societal growth, empowering individuals with knowledge.
-                                    </p>
-                                    <div class="social-icon">
-                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="#"><i class="fab fa-instagram"></i></a>
-                                        <a href="#"><i class="fab fa-dribbble"></i></a>
-                                        <a href="#"><i class="fab fa-behance"></i></a>
-                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 ps-lg-5 wow fadeInUp" data-wow-delay=".4s">
-                            <div class="single-footer-widget">
-                                <div class="widget-head">
-                                   <h3>Online Platform</h3>
-                                </div>
-                                <ul class="list-area">
-                                    <li><a href="courses.html">Coursera</a></li>
-                                    <li><a href="courses.html">MasterClass</a></li>
-                                    <li><a href="courses.html">Skillshare</a></li>
-                                    <li><a href="courses.html">LinkedIn Learning</a></li>
-                                    <li><a href="courses.html">FutureLearn</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".8s">
-                            <div class="single-footer-widget style-left">
-                                <div class="widget-head">
-                                   <h3>Contact Us</h3>
-                                </div>
-                                <div class="footer-content">
-                                    <ul class="contact-info">
-                                        <li>
-                                            55 Main Street, 2nd block
-                                            Malborne, Australia
-                                        </li>
-                                        <li>
-                                            <a href="mailto:info@example.com" class="link">info@example.com</a>
-                                        </li>
-                                        <li>
-                                            <a href="tel:+0001238899">+000 (123) 88 99</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6 ps-xl-5 wow fadeInUp" data-wow-delay=".8s">
-                            <div class="single-footer-widget">
-                                <div class="widget-head">
-                                   <h3>Newsletter</h3>
-                                </div>
-                                <div class="footer-content">
-                                    <p>Get the latest news delivered to you inbox</p>
-                                    <div class="footer-input">
-                                        <div class="icon">
-                                            <i class="far fa-envelope"></i>
-                                        </div>
-                                        <input type="email" id="email2" placeholder="Email Address">
-                                        <button class="newsletter-btn" type="submit">
-                                            Subscribe
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
             
 
             <div class="footer-bottom style-3 " style=" background-color: var(--theme-red); ">
                 <div class="container">
                     <div class="footer-bottom-wrapper ">
-                        <p style="text-align: center; color: #fff; font-weight: 600;">Copyright © <a href="">CT Group 2026</a>, all rights reserved.</p>
+                        <p style="text-align: center; color: #fff; font-weight: 600;">Copyright © <a href="">Aryana Cell 2026</a>, all rights reserved.</p>
                         <!-- <ul class="footer-menu wow fadeInUp" data-wow-delay=".5s">
                             <li>
                                 <a href="courses.html">
@@ -2588,6 +2649,7 @@
 
         <!-- Main -->
         <script src="assets/js/main.js"></script>
+        <script type="text/javascript" async src="https://widgets.nopaperforms.com/emwgts.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
                 
